@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+.footer {
+  background-color: #fff;
+  font-family: "Inter", sans-serif;
+  color: #000;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* --- Верхняя часть футера --- */
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px 120px 60px 120px;
+  box-sizing: border-box;
+}
+
+/* --- Левая и правая группы колонок --- */
+.footer-left {
+  display: flex;
+  gap: 120px;
+}
+
+.footer-right {
+  display: flex;
+  gap: 38px; 
+}
+
+/* --- Общие стили колонок --- */
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.footer-col h4 {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 120%;
+  color: #000;
+  margin: 0 0 16px 0;
+}
+
+/* --- Списки ссылок --- */
+.footer-col ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 8px;
+}
+
+.footer-col a {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 120%;
+  color: #666;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-col a:hover {
+  color: #007bc1;
+}
+
+/* --- Join Us --- */
+.join h4 {
+  margin-bottom: 12px;
+}
+
+.join p {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 120%;
+  color: #000;
+  margin-bottom: 16px;
+}
+
+.signup-btn {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 120%;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  align-self: flex-start;
+}
+
+.signup-btn:hover {
+  background-color: #333;
+}
+
+/* --- Connect With Us --- */
+.connect h4 {
+  margin-bottom: 17px;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.socials img {
+  width: 32px;
+  height: 32px;
+  padding: 10px;
+  box-sizing: content-box;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.socials img:hover {
+  opacity: 0.7;
+  transform: scale(1.05);
+}
+
+/* --- Нижняя часть футера --- */
+.footer-bottom {
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+  padding: 10px 120px; 
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 16.29px;
+  color: #666666;
+  opacity: 1;
+  box-sizing: border-box;
+}
+
+.footer-logo img {
+  width: 180px;
+  height: 40px;
+  opacity: 1;
+  transform: rotate(0deg);
+  display: block;
+}
