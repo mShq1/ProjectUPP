@@ -1,0 +1,15 @@
+# Python кэш
+__pycache__/
+*.pyc
+*.pyo
+
+# база данных
+db.sqlite3
+
+# медиа и статика
+media/
+staticfiles/
+
+# виртуальное окружение
+.venv/
+**/venv/
