@@ -1,17 +1,31 @@
 <header class="header">
-  <!-- Левая часть -->
+  <!-- Burger Button (mobile) -->
+  <button class="burger-menu" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <!-- Dropdown Menu for Mobile -->
+  <nav class="burger-dropdown">
+    <a href="#">Shop</a>
+    <a href="#">Collections</a>
+    <a href="#">Sale</a>
+  </nav>
+
+  <!-- Левая часть (Desktop) -->
   <nav class="nav-left">
     <a href="#">Shop</a>
     <a href="#">Collections</a>
     <a href="#">Sale</a>
   </nav>
 
-  <!-- Центр -->
+  <!-- Центр – Логотип -->
   <div class="logo">
     <img src="src/header/svg/logo.svg" alt="Logo">
   </div>
 
-  <!-- Правая часть -->
+  <!-- Правая часть (иконки) -->
   <div class="nav-right">
     <img src="src/header/svg/search.svg" alt="Search" class="icon">
     <img src="src/header/svg/profile.svg" alt="Profile" class="icon">
@@ -20,3 +34,4 @@
 </header>
 
 <link rel="stylesheet" href="src/header/header.css">
+<script src="src/header/header.js"></script>
