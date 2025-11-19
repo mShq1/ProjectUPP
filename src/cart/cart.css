@@ -1,0 +1,192 @@
+.cart-page {
+    padding: 40px 80px;
+}
+
+.cart-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.cart-grid {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 32px;
+}
+
+/* ===== CART ITEMS ===== */
+.cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.cart-empty {
+    padding: 40px;
+    background: #fff;
+    border-radius: 16px;
+    border: 1px solid #e4e4e8;
+    font-size: 18px;
+    text-align: center;
+    color: #555;
+}
+
+/* ===== SINGLE CART CARD ===== */
+.cart-card {
+    display: flex;
+    gap: 16px;
+    padding: 16px;
+    background: #fff;
+    border-radius: 18px;
+    border: 1px solid #e4e4e8;
+}
+
+.cart-card__img {
+    width: 120px;
+    height: 120px;
+    border-radius: 14px;
+    object-fit: cover;
+}
+
+.cart-card__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.cart-card__title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1A1A28;
+}
+
+.cart-card__price {
+    font-size: 16px;
+    font-weight: 700;
+    color: #7057DF;
+}
+
+/* ===== ORDER SUMMARY ===== */
+.order-summary {
+    background: #fff;
+    padding: 24px;
+    border-radius: 16px;
+    border: 1px solid #e4e4e8;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.order-summary h2 {
+    margin-bottom: 12px;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.summary-discount {
+    color: #7057DF;
+}
+
+.summary-total {
+    margin-top: 16px;
+    padding-top: 12px;
+    border-top: 1px solid #DDD;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.summary-total-main {
+    font-size: 22px;
+    font-weight: 700;
+    color: #7057DF;
+}
+
+.checkout-btn {
+    height: 50px;
+    border-radius: 25px;
+    background: #7057DF;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.altpay-btn {
+    height: 50px;
+    border-radius: 25px;
+    background: #fff;
+    border: 2px solid #7057DF;
+    color: #7057DF;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* ===== Заголовки с Poppins ===== */
+.cart-title,
+.section-title,
+.order-summary h2 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+}
+
+/* ===== Заголовки как Your Cart ===== */
+.cart-title,
+.section-title,
+.order-summary h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #1A1A28;
+    margin-bottom: 24px;
+}
+
+/* COMPLETE THE STYLE и YOU MAY ALSO LIKE чуть меньше */
+.section-title {
+    font-size: 22px;
+    margin: 40px 0 16px;
+    font-weight: 700;
+    color: #1A1A28;
+}
+
+/* ===== Order Summary — центрируем только заголовок ===== */
+.order-summary h2 {
+    text-align: center;
+    margin-top: 2px;      /* вот ЭТО уменьшает отступ сверху */
+    margin-bottom: 12px;  /* можно тоже чуть ужать низ, если надо */
+}
+
+
+
+/* возвращаем order-summary в исходное состояние */
+.order-summary {
+    background: #fff;
+    padding: 24px;
+    border-radius: 16px;
+    border: 1px solid #e4e4e8;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    /* убрали align-items:center чтобы не ломать layout */
+}
+
+
+
+/* ===== RECOMMENDATIONS ===== */
+.section-title {
+    margin: 40px 0 16px;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.recommend-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
