@@ -1,18 +1,16 @@
-from .views import ProductViewSet, CartItemViewSet, OrderViewSet
-from rest_framework.routers import DefaultRouter
+from django.contrib import admin
 from django.urls import path, include
-from .views import register, login
+from rest_framework import routers
+from catalog.views import CategoryViewSet, ProductViewSet, ProductVariantViewSet, CartViewSet, CartItemViewSet
 
-router = DefaultRouter()
+router = routers.DefaultRouter()
+router.register(r'categories', CategoryViewSet, basename='category')
 router.register(r'products', ProductViewSet, basename='product')
-router.register(r'cart', CartItemViewSet, basename='cart')
-router.register(r'orders', OrderViewSet, basename='order')
+router.register(r'variants', ProductVariantViewSet, basename='variant')
+router.register(r'cart', CartViewSet, basename='cart')
+router.register(r'cart-items', CartItemViewSet, basename='cart-item')
 
 urlpatterns = [
-    path('', include(router.urls)),
-]
-
-urlpatterns += [
-    path('auth/register/', register),
-    path('auth/login/', login),
+    path('admin/', admin.site.urls),
+    path('api/', include(router.urls)),
 ]

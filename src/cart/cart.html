@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Cart – Lumora</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../header/header.css">
+    <link rel="stylesheet" href="../footer/footer.css">
+    <link rel="stylesheet" href="cart.css">
+
+    <style>
+        body {
+            font-family: "Inter", sans-serif;
+            margin: 0;
+            background: #fafafa;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header-wrapper">
+    <header class="header">
+
+        <!-- Burger Button (mobile) -->
+        <button class="burger-menu" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- Dropdown Menu for Mobile -->
+        <nav class="burger-dropdown">
+            <a href="#">Shop</a>
+            <a href="#">Collections</a>
+            <a href="#">Sale</a>
+        </nav>
+
+        <!-- Левая часть (Desktop) -->
+        <nav class="nav-left">
+            <a href="#">Shop</a>
+            <a href="#">Collections</a>
+            <a href="#">Sale</a>
+        </nav>
+
+        <!-- Логотип -->
+        <div class="logo">
+            <img src="../header/svg/logo.svg" alt="Logo">
+        </div>
+
+        <!-- Иконки справа -->
+        <div class="nav-right">
+            <img src="../header/svg/search.svg" alt="Search" class="icon">
+            <img src="../header/svg/profile.svg" alt="Profile" class="icon">
+            <img src="../header/svg/cart.svg" alt="Cart" class="icon">
+        </div>
+
+    </header>
+
+    <link rel="stylesheet" href="../header/header.css">
+    <script src="../header/header.js"></script>
+</div>
+
+
+<main class="cart-page">
+
+    <h1 class="cart-title">Your Cart</h1>
+
+    <!-- ====== CART CONTENT WRAPPER ====== -->
+    <div class="cart-grid">
+
+        <!-- LEFT: CART ITEMS -->
+        <section class="cart-items" id="cart-items">
+            <!-- JS вставляет товары сюда -->
+        </section>
+
+        <!-- RIGHT: ORDER SUMMARY -->
+        <aside class="order-summary">
+            <h2>Order Summary</h2>
+
+            <div class="summary-row">
+                <span>Subtotal</span>
+                <span id="summary-subtotal">$0.00</span>
+            </div>
+
+            <div class="summary-row">
+                <span>Discount</span>
+                <span id="summary-discount" class="summary-discount">-$0.00</span>
+            </div>
+
+            <div class="summary-row">
+                <span>Shipping</span>
+                <span id="summary-shipping">Free</span>
+            </div>
+
+            <div class="summary-total">
+                <div class="summary-left">
+                    <p>Total</p>
+                </div>
+                <div class="summary-right">
+                    <span id="summary-total" class="summary-total-main">$0.00</span>
+                </div>
+            </div>
+
+            <button class="checkout-btn" onclick="window.location.href='../checkout/checkout.html'">
+                Check Out
+            </button>
+
+            <button class="altpay-btn">
+                Alternative Pay
+            </button>
+        </aside>
+
+    </div>
+
+    <!-- ===== COMPLETE THE STYLE ===== -->
+    <h2 class="section-title">Complete the Style</h2>
+
+    <!-- пока пусто -->
+
+    <!-- ===== YOU MAY ALSO LIKE ===== -->
+    <h2 class="section-title">You May Also Like</h2>
+
+    <div class="recommend-grid" id="recommend-grid">
+        <!-- сюда будем подгружать случайные товары -->
+    </div>
+
+</main>
+
+<div class="footer-wrapper">
+    <footer class="footer">
+
+        <div class="footer-top">
+            <div class="footer-left">
+
+                <div class="footer-col">
+                    <h4>Customer Care</h4>
+                    <ul>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Order Status</a></li>
+                        <li><a href="#">Warranty</a></li>
+                        <li><a href="#">Product Care</a></li>
+                        <li><a href="#">Accessibility Statement</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Policies</h4>
+                    <ul>
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="#">Terms of Sale</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Rewards Terms</a></li>
+                        <li><a href="#">Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <div class="footer-col join">
+                    <h4>Join Us</h4>
+                    <p>Subscribe and be the first to hear<br>about new products, sales, and more.</p>
+                    <button class="signup-btn">Sign Up to unlock up to $20 off</button>
+                </div>
+
+                <div class="footer-col connect">
+                    <h4>Connect With Us</h4>
+                    <div class="socials">
+                        <img src="../footer/svg/instagram.svg" alt="Instagram">
+                        <img src="../footer/svg/facebook.svg" alt="Facebook">
+                        <img src="../footer/svg/youtube.svg" alt="YouTube">
+                        <img src="../footer/svg/x.svg" alt="X">
+                        <img src="../footer/svg/linkedin.svg" alt="LinkedIn">
+                        <img src="../footer/svg/tiktok.svg" alt="TikTok">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-logo">
+                <img src="../header/svg/logo.svg" alt="Lumora">
+            </div>
+            <p>© 2025 Lumora Streetwear Company. All rights reserved.</p>
+        </div>
+
+    </footer>
+
+    <link rel="stylesheet" href="../footer/footer.css">
+</div>
+
+
+<script src="cart.js"></script>
+
+</body>
+</html>

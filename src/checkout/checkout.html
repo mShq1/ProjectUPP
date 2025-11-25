@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout – Lumora</title>
+
+    <!-- Шрифты -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Подключаем стили header/footer -->
+    <link rel="stylesheet" href="../header/header.css">
+    <link rel="stylesheet" href="../footer/footer.css">
+
+    <!-- Стили Checkout -->
+    <link rel="stylesheet" href="checkout.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Inter", sans-serif;
+            background: #f6f6f8;
+            color: #1e2130;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- ========================= HEADER ========================= -->
+<div class="header-wrapper">
+    <div class="header">
+      <button class="burger-menu" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="burger-dropdown">
+        <a href="#">Shop</a>
+        <a href="#">Collections</a>
+        <a href="#">Sale</a>
+      </nav>
+
+      <nav class="nav-left">
+        <a href="#">Shop</a>
+        <a href="#">Collections</a>
+        <a href="#">Sale</a>
+      </nav>
+
+      <div class="logo">
+        <img src="../header/svg/logo.svg" alt="Logo">
+      </div>
+
+      <div class="nav-right">
+        <img src="../header/svg/search.svg" class="icon" alt="Search">
+        <img src="../header/svg/profile.svg" class="icon" alt="Profile">
+        <img src="../header/svg/cart.svg" class="icon" alt="Cart">
+      </div>
+    </div>
+</div>
+
+<!-- ========================= MAIN ========================= -->
+<main class="checkout-page">
+
+    <div class="checkout-container">
+        <section class="checkout">
+
+            <!-- =============== LEFT COLUMN =============== -->
+            <div class="checkout__left">
+
+                <!-- Contact -->
+                <section class="checkout-block">
+                    <h1 class="checkout-title">Checkout</h1>
+
+                    <h2 class="section-title">Contact</h2>
+
+                    <div class="fields-row">
+                        <div class="field">
+                            <input type="text" placeholder="First Name*">
+                        </div>
+
+                        <div class="field">
+                            <input type="text" placeholder="Last Name">
+                        </div>
+                    </div>
+
+                    <div class="fields-row">
+                        <div class="field">
+                            <input type="email" placeholder="Email*">
+                        </div>
+
+                        <div class="field">
+                            <input type="tel" placeholder="Phone Number">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Shipping -->
+                <section class="checkout-block">
+                    <h2 class="section-title">Shipping</h2>
+
+                    <!-- Кнопки переключения Ship To Address / Ship To Access Point -->
+                    <div class="shipping-type">
+                        <div class="shipping-type__option shipping-type__option--active" data-type="address">
+                            <div class="shipping-type__content">
+                                <div class="shipping-type__title">Ship To Address</div>
+                                <div class="shipping-type__description">Deliver to your location</div>
+                            </div>
+                        </div>
+                        <div class="shipping-type__option" data-type="access-point">
+                            <div class="shipping-type__content">
+                                <div class="shipping-type__title">Ship To Access Point</div>
+                                <div class="shipping-type__description">Pick up from nearby location</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Поля для Ship To Address -->
+                    <div class="shipping-address-fields">
+                        <div class="fields-row">
+                            <div class="field">
+                                <input type="text" placeholder="Country*">
+                            </div>
+                            <div class="field">
+                                <input type="text" placeholder="City*">
+                            </div>
+                        </div>
+                        <div class="fields-row">
+                            <div class="field">
+                                <input type="text" placeholder="Address*">
+                            </div>
+                            <div class="field">
+                                <input type="text" placeholder="Postal Code*">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Поля для Ship To Access Point -->
+                    <div class="shipping-access-point">
+                        <div class="fields-row">
+                            <div class="field">
+                                <input type="text" placeholder="Country*">
+                            </div>
+                            <div class="field">
+                                <input type="text" placeholder="Search access points*">
+                            </div>
+                        </div>
+                        <div class="access-point-info">
+                            <div class="access-point__name">Central Post Office</div>
+                            <div class="access-point__address">123 Main Street, City, Postal Code</div>
+                        </div>
+                    </div>
+
+                    <!-- Shipping Methods - только для Ship To Address -->
+                    <div class="shipping-methods shipping-methods-address">
+                        <label class="shipping-option shipping-option--active">
+                            <input type="radio" name="shipping" checked>
+                            <div class="shipping-option__content">
+                                <div class="shipping-option__info">
+                                    <div class="shipping-option__title">Standard Delivery</div>
+                                    <div class="shipping-option__sub">Est. arrival: 12.05–17.05</div>
+                                </div>
+                                <div class="shipping-option__price">Free</div>
+                            </div>
+                        </label>
+
+                        <label class="shipping-option">
+                            <input type="radio" name="shipping">
+                            <div class="shipping-option__content">
+                                <div class="shipping-option__info">
+                                    <div class="shipping-option__title">Expedited Delivery</div>
+                                    <div class="shipping-option__sub">Est. arrival: 10.05–11.05</div>
+                                </div>
+                                <div class="shipping-option__price">$19.00</div>
+                            </div>
+                        </label>
+
+                        <label class="shipping-option">
+                            <input type="radio" name="shipping">
+                            <div class="shipping-option__content">
+                                <div class="shipping-option__info">
+                                    <div class="shipping-option__title">Rush Delivery</div>
+                                    <div class="shipping-option__sub">Est. arrival: 08.05–09.05</div>
+                                </div>
+                                <div class="shipping-option__price">$29.00</div>
+                            </div>
+                        </label>
+                    </div>
+
+                    <!-- Shipping Methods - только для Ship To Access Point (только бесплатная доставка) -->
+                    <div class="shipping-methods shipping-methods-access-point">
+                    </div>
+                </section>
+
+                <!-- Payment -->
+                <section class="checkout-block">
+                    <h2 class="section-title">Payment</h2>
+
+                    <div class="payment-methods">
+                        <button class="payment-tab payment-tab--active" data-method="credit-card">Credit Card</button>
+                        <button class="payment-tab" data-method="paypal">PayPal</button>
+                        <button class="payment-tab" data-method="alternative">Alternative Pay</button>
+                    </div>
+
+                    <!-- Credit Card Form -->
+<div class="payment-card">
+    <div class="payment-card__fields">
+        <!-- 1 ряд: Card Number (занимает обе колонки) -->
+        <div class="payment-card__field payment-card__field--wide">
+            <input type="text" placeholder="Card Number*">
+        </div>
+
+        <!-- 2 ряд: CVV и Expire Date -->
+        <div class="payment-card__field">
+            <input type="text" placeholder="CVV*">
+        </div>
+
+        <div class="payment-card__field">
+            <input type="text" placeholder="Expire Date*">
+        </div>
+
+        <!-- 3 ряд: Cardholder Name (занимает обе колонки) -->
+        <div class="payment-card__field payment-card__field--wide">
+            <input type="text" placeholder="Cardholder Name*">
+        </div>
+    </div>
+</div>
+
+                    <!-- PayPal -->
+                    <div class="alternative-payment" id="paypal-payment">
+                        <div class="alternative-payment__title">PayPal</div>
+                        <div class="alternative-payment__description">You will be redirected to PayPal to complete your payment securely</div>
+                        <button class="alternative-payment__button">Continue with PayPal</button>
+                    </div>
+
+                    <!-- Alternative Pay -->
+                    <div class="alternative-payment" id="alternative-payment">
+                        <div class="alternative-payment__title">Alternative Payment Methods</div>
+                        <div class="alternative-payment__description">Choose from various payment options including Apple Pay, Google Pay, and more</div>
+                        <button class="alternative-payment__button">Show Payment Options</button>
+                    </div>
+
+                    <button class="checkout-button">Confirm &amp; Pay</button>
+                </section>
+            </div>
+
+            <!-- =============== RIGHT COLUMN =============== -->
+            <aside class="checkout__right">
+
+                <!-- Order Summary -->
+<section class="order-summary">
+    <h2>Order Summary</h2>
+
+    <div class="order-summary__row">
+        <span>Subtotal</span>
+        <span id="subtotal">$0.00</span>
+    </div>
+
+    <div class="order-summary__row">
+        <span>Discount</span>
+        <span class="order-summary__discount" id="discount">- $0.00</span>
+    </div>
+
+    <div class="order-summary__row">
+        <span>Shipping</span>
+        <span id="shipping">Free</span>
+    </div>
+
+    <div class="order-summary__total-row">
+        <div>
+            <div class="label">Total</div>
+        </div>
+        <div class="order-summary__total" id="total">$0.00</div>
+    </div>
+</section>
+
+                <!-- Perfect addition -->
+                <section class="perfect-addition">
+                    <h3>Perfect addition</h3>
+
+                    <article class="addon-card">
+                        <img src="../catalog/test-product.jpg" class="addon-card__img">
+                        <div class="addon-card__info">
+                            <div class="addon-card__title">Crop Hike Crew Socks</div>
+                            <div class="addon-card__meta">Color: Charcoal<br>Size: L</div>
+                            <div class="addon-card__price">$17.00</div>
+                        </div>
+                    </article>
+                </section>
+
+                <!-- Cart -->
+                <section class="your-cart">
+                    <h3>Your Cart</h3>
+
+                    <article class="cart-card">
+                        <img src="../catalog/test-product.jpg" class="cart-card__img">
+                        <div class="cart-card__info">
+                            <div class="cart-card__title">Men's PFG Pro Sport Boot</div>
+                            <div class="cart-card__meta">
+                                Color: Grey Ice<br>Size: 8, Qty: 1
+                            </div>
+                            <div class="cart-card__price">$137.00</div>
+                        </div>
+                    </article>
+                </section>
+
+            </aside>
+        </section>
+    </div>
+
+</main>
+
+<!-- ========================= FOOTER ========================= -->
+<div class="footer-wrapper">
+    <div class="footer">
+        <div class="footer-top">
+            <div class="footer-left">
+                <div class="footer-col">
+                    <h4>Customer Care</h4>
+                    <ul>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Order Status</a></li>
+                        <li><a href="#">Warranty</a></li>
+                        <li><a href="#">Product Care</a></li>
+                        <li><a href="#">Accessibility</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Policies</h4>
+                    <ul>
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="#">Terms of Sale</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Rewards Terms</a></li>
+                        <li><a href="#">Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <div class="footer-col join">
+                    <h4>Join Us</h4>
+                    <p>Subscribe and be the first to hear about new products.</p>
+                    <button class="signup-btn">Sign Up to unlock $20 off</button>
+                </div>
+
+                <div class="footer-col connect">
+                    <h4>Connect With Us</h4>
+                    <div class="socials">
+                        <img src="../footer/svg/instagram.svg">
+                        <img src="../footer/svg/facebook.svg">
+                        <img src="../footer/svg/youtube.svg">
+                        <img src="../footer/svg/x.svg">
+                        <img src="../footer/svg/linkedin.svg">
+                        <img src="../footer/svg/tiktok.svg">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-logo">
+                <img src="../header/svg/logo.svg">
+            </div>
+            <p>© 2025 Lumora Streetwear Company. All rights reserved.</p>
+        </div>
+    </div>
+</div>
+
+<!-- ========================= SCRIPTS ========================= -->
+<script src="../header/header.js"></script>
+<script src="../footer/footer.js"></script>
+<script src="checkout.js"></script>
+
+<script>
+// Shipping type switching
+document.addEventListener('DOMContentLoaded', function() {
+    const shippingTypeOptions = document.querySelectorAll('.shipping-type__option');
+    
+    function updateShippingDisplay(type) {
+        if (type === 'address') {
+            document.querySelector('.shipping-address-fields').style.display = 'block';
+            document.querySelector('.shipping-access-point').style.display = 'none';
+            document.querySelector('.shipping-methods-address').style.display = 'flex';
+            document.querySelector('.shipping-methods-access-point').style.display = 'none';
+        } else {
+            document.querySelector('.shipping-address-fields').style.display = 'none';
+            document.querySelector('.shipping-access-point').style.display = 'block';
+            document.querySelector('.shipping-methods-address').style.display = 'none';
+            document.querySelector('.shipping-methods-access-point').style.display = 'flex';
+        }
+    }
+    
+    shippingTypeOptions.forEach(option => {
+        option.addEventListener('click', function() {
+            // Remove active class from all options
+            shippingTypeOptions.forEach(opt => opt.classList.remove('shipping-type__option--active'));
+            
+            // Add active class to clicked option
+            this.classList.add('shipping-type__option--active');
+            
+            const type = this.getAttribute('data-type');
+            updateShippingDisplay(type);
+        });
+    });
+    
+    // Shipping option selection
+    const shippingOptions = document.querySelectorAll('.shipping-option');
+    
+    shippingOptions.forEach(option => {
+        option.addEventListener('click', function() {
+            // Remove active class from all options in the same group
+            const group = this.closest('.shipping-methods');
+            group.querySelectorAll('.shipping-option').forEach(opt => {
+                opt.classList.remove('shipping-option--active');
+            });
+            
+            // Add active class to clicked option
+            this.classList.add('shipping-option--active');
+            
+            // Check the radio input
+            const radio = this.querySelector('input[type="radio"]');
+            if (radio) {
+                radio.checked = true;
+            }
+        });
+    });
+    
+    // Payment method switching
+    const paymentTabs = document.querySelectorAll('.payment-tab');
+    const paymentCard = document.querySelector('.payment-card');
+    const paypalPayment = document.getElementById('paypal-payment');
+    const alternativePayment = document.getElementById('alternative-payment');
+    
+    function updatePaymentDisplay(method) {
+        // Hide all payment methods first
+        paymentCard.style.display = 'none';
+        if (paypalPayment) paypalPayment.style.display = 'none';
+        if (alternativePayment) alternativePayment.style.display = 'none';
+        
+        // Show selected payment method
+        if (method === 'credit-card') {
+            paymentCard.style.display = 'block';
+        } else if (method === 'paypal' && paypalPayment) {
+            paypalPayment.style.display = 'block';
+        } else if (method === 'alternative' && alternativePayment) {
+            alternativePayment.style.display = 'block';
+        }
+    }
+    
+    paymentTabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+            // Remove active class from all tabs
+            paymentTabs.forEach(t => t.classList.remove('payment-tab--active'));
+            
+            // Add active class to clicked tab
+            this.classList.add('payment-tab--active');
+            
+            const method = this.getAttribute('data-method');
+            updatePaymentDisplay(method);
+        });
+    });
+    
+    // Initialize displays
+    updateShippingDisplay('address');
+    updatePaymentDisplay('credit-card');
+});
+</script>
+
+</body>
+</html>
