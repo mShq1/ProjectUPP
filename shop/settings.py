@@ -38,10 +38,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'corsheaders',  # ← ДОБАВЬТЕ ЭТУ СТРОЧКУ
     'catalog',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',  # ← ДОЛЖЕН БЫТЬ ПЕРВЫМ!
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -123,3 +125,13 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# ↓ ДОБАВЬТЕ ЭТИ НАСТРОЙКИ В КОНЕЦ ФАЙЛА ↓
+
+# CORS settings
+CORS_ALLOW_ALL_ORIGINS = True  # Разрешает все домены для разработки
+CORS_ALLOW_CREDENTIALS = True
+
+# Media files (добавьте эти строки)
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR 
