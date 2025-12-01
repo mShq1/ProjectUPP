@@ -1,13 +1,14 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Your Cart – Lumora</title>
+    <title>Your Account – Lumora</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="../header/header.css">
     <link rel="stylesheet" href="../footer/footer.css">
-    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="account.css">
 
     <style>
         body {
@@ -71,68 +72,77 @@
     <script src="../header/header.js"></script>
 </div>
 
+<main class="account-page">
 
-<main class="cart-page">
+    <h1 class="account-title">Welcome, boss <a href="#" class="logout-link">(Logout)</a></h1>
 
-    <h1 class="cart-title">Your Cart</h1>
+    <!-- ====== ACCOUNT CONTENT WRAPPER ====== -->
+    <div class="account-grid">
 
-    <!-- ====== CART CONTENT WRAPPER ====== -->
-    <div class="cart-grid">
-
-        <!-- LEFT: CART ITEMS -->
-        <section class="cart-items" id="cart-items">
-            <!-- JS вставляет товары сюда -->
+        <!-- LEFT: ACCOUNT SECTIONS -->
+        <section class="account-sections" id="account-sections">
+            <div class="section-card personal-info">
+                <div class="section-header">
+                    <img src="../account/icons/personal info.svg" class="icon">
+                    <h2>Personal Info</h2>
+                    <a href="#" class="edit-link">Edit</a>
+                </div>
+                <div class="section-content">
+                    <div class="info-row">
+                        <div class="info-item">
+                            <span class="label">First Name</span>
+                            <span class="value">boss</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Email</span>
+                            <span class="value">bossait@gmail.com</span>
+                        </div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-item">
+                            <span class="label">Last Name</span>
+                            <span class="value">-</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Email</span>
+                            <span class="value">********</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-card addresses">
+                <div class="section-header">
+                    <img src="../account/icons/address.svg" class="icon">
+                    <h2>My Addresses</h2>
+                    <a href="#" class="edit-link">Edit</a>
+                </div>
+                <div class="section-content">
+                    <p>We have no addresses saved yet.</p>
+                </div>
+            </div>
+            <div class="section-card payment">
+                <div class="section-header">
+                    <img src="../account/icons/payment.svg" class="icon">
+                    <h2>Payment Settings</h2>
+                    <a href="#" class="edit-link">Edit</a>
+                </div>
+                <div class="section-content">
+                    <p>We have no credit cards saved yet.</p>
+                </div>
+            </div>
+            <div class="section-card order-history">
+                <div class="section-header">
+                    <img src="../account/icons/history.svg" class="icon">
+                    <h2>Order History</h2>
+                    <a href="#" class="edit-link">Edit</a>
+                </div>
+                <div class="section-content">
+                    <p>We have no orders saved yet. <a href="#" class="shopping-link">Get Shopping!</a></p>
+                    <p>Please Contact Customer Service if you have any trouble accessing your order history or tracking information.</p>
+                </div>
+            </div>
         </section>
 
-        <!-- RIGHT: ORDER SUMMARY -->
-        <aside class="order-summary">
-            <h2>Order Summary</h2>
-
-            <div class="summary-row">
-                <span>Subtotal</span>
-                <span id="summary-subtotal">$0.00</span>
-            </div>
-
-            <div class="summary-row">
-                <span>Discount</span>
-                <span id="summary-discount" class="summary-discount">-$0.00</span>
-            </div>
-
-            <div class="summary-row">
-                <span>Shipping</span>
-                <span id="summary-shipping">Free</span>
-            </div>
-
-            <div class="summary-total">
-                <div class="summary-left">
-                    <p>Total</p>
-                </div>
-                <div class="summary-right">
-                    <span id="summary-total" class="summary-total-main">$0.00</span>
-                </div>
-            </div>
-
-            <button class="checkout-btn" onclick="window.location.href='../checkout/checkout.html'">
-                Check Out
-            </button>
-
-            <button class="altpay-btn">
-                Alternative Pay
-            </button>
-        </aside>
-
-    </div>
-
-    <!-- ===== COMPLETE THE STYLE ===== -->
-    <h2 class="section-title">Complete the Style</h2>
-
-    <!-- пока пусто -->
-
-    <!-- ===== YOU MAY ALSO LIKE ===== -->
-    <h2 class="section-title">You May Also Like</h2>
-
-    <div class="recommend-grid" id="recommend-grid">
-        <!-- сюда будем подгружать случайные товары -->
     </div>
 
 </main>
@@ -169,7 +179,7 @@
             <div class="footer-right">
                 <div class="footer-col join">
                     <h4>Join Us</h4>
-                    <p>Subscribe and be the first to hear<br>about new products, sales, and more.</p>
+                    <p>Subscribe to be the first to hear<br>about new products, sales, and more.</p>
                     <button class="signup-btn">Sign Up to unlock up to $20 off</button>
                 </div>
 
@@ -199,8 +209,7 @@
     <link rel="stylesheet" href="../footer/footer.css">
 </div>
 
-
-<script src="cart.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>
