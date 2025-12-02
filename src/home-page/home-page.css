@@ -1,7 +1,20 @@
+/* Убираем горизонтальный скролл на всей странице */
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 .video-container {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 100vh;
+    min-height: 700px;
 }
 
 video {
@@ -14,85 +27,340 @@ video {
     position: absolute;
     top: 0;
     left: 0;
-    width: 50%; /* Половина экрана */
+    width: 50%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(95, 90, 90, 0.4) 0%, rgba(206, 200, 200, 0) 100%); /* Градиент от полупрозрачного к прозрачному */
-    backdrop-filter: blur(5px); /* Эффект размытия */
+    background: linear-gradient(to bottom, rgba(19, 0, 0, 0.4) 0%, rgba(206, 200, 200, 0) 100%);
+    backdrop-filter: blur(5px);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     padding: 20px;
 }
 
-/* Стиль для текста Lumora, который будет "вырезать" блюр */
-.lumora-text-cutout {
+.lumora-image {
     position: absolute;
-    top: 40px; /* Позиционирование сверху */
-    left: 20px; /* Позиционирование слева */
-    font-family: 'Poppins', sans-serif;
-    font-weight: 900;
-    font-size: 80px; /* Большой размер */
-    color: rgba(255, 255, 255, 0.8); /* Почти белый цвет */
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    top: 30px;
+    left: 25px;
+    width: 320px;
+    height: auto;
     z-index: 10;
-    
-    /* Ключевой эффект: текст становится "дыркой" в блюре */
     mix-blend-mode: screen;
-    
-    /* Дополнительные эффекты для лучшей читаемости */
-    text-shadow: 
-        0 0 10px rgba(255, 255, 255, 0.3),
-        0 0 20px rgba(255, 255, 255, 0.2);
-    
-    /* Чтобы текст не мешал кликам */
+    filter: 
+        drop-shadow(0 0 8px rgba(255, 255, 255, 0.3))
+        drop-shadow(0 0 15px rgba(255, 255, 255, 0.2));
     pointer-events: none;
 }
 
-/* Альтернативный вариант с другим эффектом */
-.lumora-text-cutout.alternative {
-    mix-blend-mode: difference;
-    color: white;
-    text-shadow: 
-        2px 2px 4px rgba(0, 0, 0, 0.5),
-        -2px -2px 4px rgba(0, 0, 0, 0.3);
-}
-
 .about-text {
+    position: absolute;
+    bottom: 300px;
+    left: 45px;
     width: 84px;
     height: 42px;
     opacity: 1;
     color: #FFFFFF;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
-    font-style: normal;
-    font-size: 28px;
+    font-size: 24px;
     line-height: 100%;
     letter-spacing: 0;
     vertical-align: middle;
-    position: relative;
-    top: 619px;
-    left: 25px;
-    /* Добавляем z-index чтобы был над текстом Lumora */
     z-index: 20;
 }
 
 .main-text {
-    width: 622px;
-    height: 270px;
+    position: absolute;
+    bottom: 60px;
+    left: 45px;
+    width: 500px;
+    height: auto;
     opacity: 1;
     color: #FFFFFF;
     font-family: 'Poppins', sans-serif;
     font-weight: 275;
-    font-style: ExtraLight;
-    font-size: 36px;
+    font-size: 28px;
+    line-height: 120%;
+    letter-spacing: 0;
+    vertical-align: middle;
+    white-space: normal;
+    z-index: 20;
+}
+
+/* Секция заголовков под видео */
+.titles-section {
+    width: 100%;
+    padding: 30px 120px 10px;
+    background: transparent;
+}
+
+.titles-column {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.title-item h3 {
+    width: 382px;
+    height: 40px;
+    opacity: 1;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
     line-height: 100%;
     letter-spacing: 0;
     vertical-align: middle;
-    position: relative;
-    top: 633px;
-    left: 25px;
-    white-space: nowrap;
-    /* Добавляем z-index чтобы был над текстом Lumora */
-    z-index: 20;
+    color: #000;
+    margin: 0;
+    text-align: left;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+/* Секция с изображениями коллекций - ИСПРАВЛЕНО */
+.collections-section {
+    width: 100%;
+    padding: 0 120px 40px;
+    background: transparent;
+}
+
+/* УМЕНЬШИЛ с 650px до 450px и ОБНОВИЛ медиа-запросы */
+.collections-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 500px); /* Нормальный размер */
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.collection-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px; /* Соответствует grid-template-columns */
+}
+
+
+
+.collection-text-content {
+    margin-top: 8px;
+    text-align: center;
+    width: 450px;
+    padding: 0 5px;
+}
+
+.collection-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 26px;
+    text-align: center;
+    color: #000;
+    margin-bottom: 4px;
+}
+
+.collection-description {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    color: #666;
+    margin: 0;
+}
+
+/* Адаптивность - ОБНОВИЛ пропорционально */
+@media (max-width: 1400px) {
+    .collections-grid {
+        grid-template-columns: repeat(3, 400px); /* Увеличил с 350px */
+        gap: 8px;
+    }
+    
+    .collection-item,
+    .collection-text-content {
+        width: 400px; /* Увеличил с 350px */
+    }
+    
+    .collection-image {
+        height: 500px; /* 400/450*562 = 500px */
+    }
+}
+
+@media (max-width: 1200px) {
+    .titles-section,
+    .collections-section {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+    
+    .collections-grid {
+        grid-template-columns: repeat(3, 350px); /* Увеличил с 300px */
+        gap: 6px;
+    }
+    
+    .collection-item,
+    .collection-text-content {
+        width: 350px; /* Увеличил с 300px */
+    }
+    
+    .collection-image {
+        height: 438px; /* 350/450*562 = 438px */
+    }
+    
+    .collection-title {
+        font-size: 22px;
+        line-height: 24px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .titles-section,
+    .collections-section {
+        padding-left: 60px; /* Увеличил с 40px */
+        padding-right: 60px;
+    }
+    
+    .collections-grid {
+        grid-template-columns: repeat(2, 380px); /* Увеличил с 320px */
+        gap: 15px;
+    }
+    
+    .collection-item,
+    .collection-text-content {
+        width: 380px; /* Увеличил с 320px */
+    }
+    
+    .collection-image {
+        height: 475px; /* 380/450*562 = 475px */
+    }
+    
+    /* Третье изображение центрируем */
+    .collections-grid > .collection-item:nth-child(3) {
+        grid-column: span 2;
+        width: 380px; /* Увеличил с 320px */
+        justify-self: center;
+    }
+}
+
+@media (max-width: 900px) {
+    .collections-section {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    
+    .collections-grid {
+        grid-template-columns: repeat(2, 340px);
+        gap: 12px;
+    }
+    
+    .collection-item,
+    .collection-text-content {
+        width: 340px;
+    }
+    
+    .collection-image {
+        height: 425px; /* 340/450*562 = 425px */
+    }
+    
+    .collections-grid > .collection-item:nth-child(3) {
+        width: 340px;
+    }
+}
+
+@media (max-width: 768px) {
+    .titles-section,
+    .collections-section {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    
+    .titles-section {
+        padding-top: 20px;
+        padding-bottom: 5px;
+    }
+    
+    .title-item h3 {
+        font-size: 28px;
+        height: 35px;
+        width: 100%;
+    }
+    
+    .collections-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        max-width: 450px; /* Увеличил с 400px */
+        margin: 0 auto;
+    }
+    
+    .collection-item,
+    .collection-text-content {
+        width: 100%;
+        max-width: 450px; /* Увеличил с 400px */
+    }
+    
+    .collection-image {
+        height: 562px; /* Оригинальная высота */
+    }
+    
+    .collections-grid > .collection-item:nth-child(3) {
+        grid-column: span 1;
+        width: 100%;
+        max-width: 450px;
+    }
+}
+
+@media (max-width: 480px) {
+    .lumora-image {
+        width: 250px;
+        top: 20px;
+        left: 20px;
+    }
+    
+    .about-text {
+        bottom: 250px;
+        font-size: 20px;
+    }
+    
+    .main-text {
+        bottom: 40px;
+        width: 90%;
+        font-size: 22px;
+    }
+    
+    .titles-section {
+        padding: 15px 20px 5px;
+    }
+    
+    .title-item h3 {
+        font-size: 24px;
+    }
+    
+    .collections-grid {
+        max-width: 100%;
+        gap: 20px;
+    }
+    
+    .collection-image {
+        height: 450px;
+    }
+    
+    .collection-title {
+        font-size: 20px;
+    }
+    
+    .collection-description {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 380px) {
+    .collection-image {
+        height: 380px;
+    }
+    
+    .collection-title {
+        font-size: 18px;
+        line-height: 20px;
+    }
 }

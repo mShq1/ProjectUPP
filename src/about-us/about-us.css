@@ -1,0 +1,231 @@
+/* about-us.css */
+
+.about-us-page {
+    font-family: 'Poppins', sans-serif;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-hero-section {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Заголовок в одну строчку */
+.hero-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #000;
+    text-align: left;
+    margin: 0 0 32px 0; /* 32px отступ снизу */
+}
+
+/* Контейнер для двух текстовых блоков */
+.hero-text-container {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.hero-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-right {
+    flex: 1;
+}
+
+.hero-description,
+.hero-mission {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: justify;
+    color: #333;
+    margin: 0 0 20px 0;
+}
+
+/* Кнопка под первым блоком текста */
+.hero-button {
+    width: 163px;
+    height: 43px;
+    background: #000;
+    color: white;
+    border: none;
+    border-radius: 100px;
+    padding: 12px 32px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+    margin-top: 20px;
+    align-self: flex-start;
+}
+
+.hero-button:hover {
+    opacity: 0.9;
+}
+
+/* Нижняя секция с изображением и статистикой */
+.hero-content {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+.hero-image img {
+    width: 440px;
+    height: 550px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    flex: 1;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-number {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 96px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+/* Текст "days", "months", "years", "products" - 22px */
+.stat-number span {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 22px !important; /* Принудительно 22px */
+    vertical-align: baseline;
+}
+
+.stat-label {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    color: #333;
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+    .hero-text-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .hero-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .hero-image img {
+        width: 100%;
+        height: auto;
+        max-width: 440px;
+        margin: 0 auto;
+        display: block;
+    }
+    
+    .stats-grid {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-us-page {
+        padding: 20px 15px;
+    }
+    
+    .hero-title {
+        font-size: 28px;
+        margin-bottom: 24px;
+    }
+    
+    .hero-text-container {
+        gap: 15px;
+        margin-bottom: 30px;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .hero-description,
+    .hero-mission {
+        font-size: 18px;
+        line-height: 120%;
+    }
+    
+    .hero-button {
+        margin-top: 15px;
+    }
+    
+    .hero-content {
+        gap: 30px;
+    }
+    
+    .stat-number {
+        font-size: 64px;
+    }
+    
+    .stat-number span {
+        font-size: 18px !important;
+    }
+    
+    .stat-label {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 24px;
+    }
+    
+    .hero-description,
+    .hero-mission {
+        font-size: 16px;
+    }
+    
+    .hero-button {
+        width: 140px;
+        height: 40px;
+        padding: 10px 24px;
+        font-size: 14px;
+    }
+    
+    .stat-number {
+        font-size: 48px;
+    }
+    
+    .stat-number span {
+        font-size: 16px !important;
+    }
+    
+    .stat-label {
+        font-size: 16px;
+    }
+}

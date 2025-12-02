@@ -1,0 +1,287 @@
+/* Категории под заголовком CATEGORY */
+.category-section {
+    width: 100%;
+    padding: 0 120px 100px;
+    background: transparent;
+}
+
+.category-container {
+    width: 100%;
+    max-width: 1360px;
+    margin: 0 auto;
+}
+
+/* Основное изображение категории */
+.category-main-image {
+    width: 1360px;
+    height: 700px;
+    object-fit: cover;
+    border-radius: 20px;
+    overflow: hidden;
+    display: block;
+}
+
+/* Контейнер для позиционирования */
+.category-image-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+/* Контент поверх изображения */
+.category-content-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Левое меню с кнопками - МЕНЬШЕ */
+.category-menu {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 20px;
+    width: 260px;
+}
+
+.category-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.category-btn {
+    background: transparent;
+    border: none;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: left;
+    padding: 10px 16px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.category-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.category-btn.active {
+    background: rgba(255, 255, 255, 0.15);
+    font-weight: 500;
+}
+
+.category-btn.active::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 60%;
+    background: white;
+    border-radius: 0 2px 2px 0;
+}
+
+/* Правый информационный блок - В ПРАВОМ НИЖНЕМ УГЛУ */
+.category-info {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 25px;
+    width: 320px;
+    color: white;
+}
+
+.category-info-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.category-info-description {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Кнопка-ссылка Shop category */
+.category-shop-btn {
+    display: inline-block;
+    background: white;
+    color: black;
+    border: none;
+    padding: 12px 25px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none; /* Убираем подчеркивание ссылки */
+    text-align: center;
+}
+
+.category-shop-btn:hover {
+    background: #f0f0f0;
+    transform: translateY(-2px);
+    text-decoration: none; /* Убираем подчеркивание при наведении */
+    color: black;
+}
+
+/* Адаптивность */
+@media (max-width: 1400px) {
+    .category-section {
+        padding: 0 80px 80px;
+    }
+    
+    .category-main-image {
+        width: 100%;
+        height: 600px;
+    }
+    
+    .category-menu {
+        width: 220px;
+    }
+    
+    .category-info {
+        width: 280px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .category-section {
+        padding: 0 60px 60px;
+    }
+    
+    .category-main-image {
+        height: 500px;
+    }
+    
+    .category-menu {
+        width: 200px;
+        padding: 18px;
+    }
+    
+    .category-btn {
+        font-size: 16px;
+        padding: 8px 14px;
+    }
+    
+    .category-info {
+        width: 250px;
+        padding: 20px;
+    }
+    
+    .category-info-title {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .category-main-image {
+        height: 400px;
+    }
+    
+    .category-menu {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        width: 100%;
+        margin-bottom: 15px;
+        background: rgba(0, 0, 0, 0.8);
+    }
+    
+    .category-buttons {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+    }
+    
+    .category-info {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        width: 100%;
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .category-section {
+        padding: 0 40px 50px;
+    }
+    
+    .category-main-image {
+        height: 350px;
+    }
+    
+    .category-menu {
+        padding: 15px;
+    }
+    
+    .category-btn {
+        font-size: 15px;
+        padding: 6px 12px;
+    }
+    
+    .category-info {
+        padding: 18px;
+    }
+    
+    .category-info-title {
+        font-size: 20px;
+    }
+    
+    .category-info-description {
+        font-size: 14px;
+    }
+    
+    .category-shop-btn {
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .category-section {
+        padding: 0 20px 40px;
+    }
+    
+    .category-main-image {
+        height: 300px;
+    }
+    
+    .category-buttons {
+        flex-direction: column;
+    }
+    
+    .category-btn {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .category-info-title {
+        font-size: 18px;
+    }
+    
+    .category-info-description {
+        font-size: 13px;
+    }
+}

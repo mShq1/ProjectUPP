@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="home-page.css">
+<link rel="stylesheet" href="home-category.css">
 <!-- HEADER -->
 <div class="header-wrapper">
     <header class="header">
@@ -45,6 +46,7 @@
         </div>
     </header>
 </div>
+
 <div class="video-container">
     <video width="100%" autoplay loop muted>
         <source src="../home-page/view/video.mp4" type="video/mp4">
@@ -52,8 +54,8 @@
     </video>
     
     <div class="glass-effect">
-        <!-- Текст Lumora, который создает эффект "выреза" -->
-        <div class="lumora-text-cutout">LUMORA</div>
+        <!-- ВМЕСТО ТЕКСТА - ИЗОБРАЖЕНИЕ SVG -->
+        <img src="../home-page/view/Lumora.svg" alt="LUMORA" class="lumora-image">
         
         <!-- Текст About -->
         <div class="about-text">
@@ -71,6 +73,131 @@
     </div>
 </div>
 
+<!-- Секция с заголовками -->
+<section class="titles-section">
+    <div class="titles-container">
+        <div class="titles-column">
+            <!-- Заголовок CATEGORY -->
+            <div class="title-item">
+                <h3>CATEGORY</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Секция категорий - ПРЯМО ПОД CATEGORY -->
+<section class="category-section">
+    <div class="category-container">
+        <div style="position: relative;">
+            <!-- Основное изображение -->
+            <img src="../home-page/view/image 2.svg" alt="Category" class="category-main-image" id="category-main-image">
+            
+            <!-- Контент поверх изображения -->
+            <div class="category-content-overlay">
+                <!-- Левое меню -->
+                <div class="category-menu">
+                    <div class="category-buttons">
+                        <button class="category-btn active" data-image="image 2.svg" data-title="New & Trending" data-description="Our new collection inspired by Darth Vader is available now. But don't wait, this special-edition gear won't last long.">
+                            New & Trending
+                        </button>
+                        <button class="category-btn" data-image="image 22.svg" data-title="Men" data-description="Discover our latest collection for men. Premium quality, modern designs for everyday style.">
+                            Men
+                        </button>
+                        <button class="category-btn" data-image="image 23.svg" data-title="Women" data-description="Explore feminine elegance with our women's collection. Sophisticated styles for every occasion.">
+                            Women
+                        </button>
+                        <button class="category-btn" data-image="image 24.svg" data-title="Kids" data-description="Comfortable and stylish clothing for kids. Quality materials for active young ones.">
+                            Kids
+                        </button>
+                        <button class="category-btn" data-image="image 25.svg" data-title="Bags & Gear" data-description="Functional and fashionable bags & gear. Perfect companions for your daily adventures.">
+                            Bags & Gear
+                        </button>
+                        <button class="category-btn" data-image="image 26.svg" data-title="Shoes" data-description="Step out in style with our footwear collection. Comfort meets contemporary design.">
+                            Shoes
+                        </button>
+                        <button class="category-btn" data-image="image 27.svg" data-title="Accessories" data-description="Complete your look with our accessories. Minimalist pieces that make a statement.">
+                            Accessories
+                        </button>
+                        <button class="category-btn" data-image="image 28.svg" data-title="Sale" data-description="Don't miss our sale items! Limited time offers on selected products.">
+                            Sale
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Правый информационный блок - в правом нижнем углу -->
+                <div class="category-info">
+                    <h2 class="category-info-title">New & Trending</h2>
+                    <p class="category-info-description">
+                        Our new collection inspired by Darth Vader is available now. But don't wait, this special-edition gear won't last long.
+                    </p>
+                     <a href="../catalog/catalog.html" class="category-shop-btn">Shop category</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Заголовок BESTSELLERS -->
+<section class="titles-section" style="padding-top: 0;">
+    <div class="titles-container">
+        <div class="titles-column">
+            <div class="title-item">
+                <h3>BESTSELLERS</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Здесь будет секция BESTSELLERS (если нужно) -->
+
+<!-- Заголовок LATEST COLLECTIONS -->
+<section class="titles-section" style="padding-top: 0;">
+    <div class="titles-container">
+        <div class="titles-column">
+            <div class="title-item">
+                <h3>LATEST COLLECTIONS</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Секция с коллекциями - ПОД LATEST COLLECTIONS -->
+<section class="collections-section">
+    <div class="collections-grid">
+        <!-- Изображение 1: Star Wars -->
+        <div class="collection-item">
+            <img src="../home-page/view/Frame 301.svg" alt="New Star Wars Gear" class="collection-image">
+            <div class="collection-text-content">
+                <h3 class="collection-title">New Star Wars™ Gear Is Here</h3>
+                <p class="collection-description">
+                    Our new collection inspired by Darth Vader is available. But don't wait, this special-edition gear won't last long.
+                </p>
+            </div>
+        </div>
+        
+        <!-- Изображение 2: Snow Titanium -->
+        <div class="collection-item">
+            <img src="../home-page/view/snow-titanium-hp.svg" alt="First Lift To Last Run" class="collection-image">
+            <div class="collection-text-content">
+                <h3 class="collection-title">First Lift To Last Run</h3>
+                <p class="collection-description">
+                    Stay warm, dry, and charging hard all day in new ski and snow gear.
+                </p>
+            </div>
+        </div>
+        
+        <!-- Изображение 3: Fleece -->
+        <div class="collection-item">
+            <img src="../home-page/view/09-30_1761518_Fleece_Subhero_v0.svg" alt="Fleece Favorites" class="collection-image">
+            <div class="collection-text-content">
+                <h3 class="collection-title">Fleece Favorites</h3>
+                <p class="collection-description">
+                    Get ready for chilly days ahead with soft, comfortable fleece.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
 
 <link rel="stylesheet" href="../header/header.css">
 <script src="../header/header.js"></script>
@@ -98,7 +225,8 @@
                         <li><a href="#">Terms of Sale</a></li>
                         <li><a href="#">Privacy Policy</a></li>
                         <li><a href="#">Rewards Terms</a></li>
-                        <li><a href="#">Conditions</a></li>
+                        <!-- Измененная ссылка: -->
+                        <li><a href="../about-us/about-us.html">About us</a></li>
                     </ul>
                 </div>
             </div>
@@ -135,3 +263,39 @@
 
 <!-- Подключение CSS для футера -->
 <link rel="stylesheet" href="../footer/footer.css">
+
+<!-- Подключение JS для категорий -->
+<script>
+// Добавьте этот скрипт в конец или в home-page.js
+document.addEventListener('DOMContentLoaded', function() {
+    const categoryButtons = document.querySelectorAll('.category-btn');
+    const mainImage = document.getElementById('category-main-image');
+    const infoTitle = document.querySelector('.category-info-title');
+    const infoDescription = document.querySelector('.category-info-description');
+    
+    if (categoryButtons.length && mainImage) {
+        categoryButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Убираем активный класс у всех кнопок
+                categoryButtons.forEach(btn => btn.classList.remove('active'));
+                
+                // Добавляем активный класс текущей кнопке
+                this.classList.add('active');
+                
+                // Получаем данные из data-атрибутов
+                const imageSrc = this.getAttribute('data-image');
+                const title = this.getAttribute('data-title');
+                const description = this.getAttribute('data-description');
+                
+                // Обновляем изображение
+                mainImage.src = `../home-page/view/${imageSrc}`;
+                mainImage.alt = title;
+                
+                // Обновляем заголовок и описание
+                if (infoTitle) infoTitle.textContent = title;
+                if (infoDescription) infoDescription.textContent = description;
+            });
+        });
+    }
+});
+</script>
