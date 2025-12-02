@@ -1,16 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
 
+/* --- Добавляем отступ, чтобы контент не уезжал под фиксированный хедер --- */
+body {
+  padding-top: 80px; /* высота хедера на десктопе */
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 64px; /* высота хедера на мобильных */
+  }
+}
+
 /* --- Header --- */
+.header-wrapper {
+  position: fixed; /* Фиксируем хедер */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.06);
+}
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 80px;
-  background-color: #fff;
   font-family: "Inter", sans-serif;
   position: relative;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.06);
+  padding: 10px 20px;
 }
 
 /* --- Бургер-меню --- */
@@ -37,9 +57,11 @@
 .burger-menu.active span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
+
 .burger-menu.active span:nth-child(2) {
   opacity: 0;
 }
+
 .burger-menu.active span:nth-child(3) {
   transform: rotate(-45deg) translate(7px, -7px);
 }
@@ -128,7 +150,6 @@
   gap: 20px;
 }
 
-/* Иконки */
 .nav-right .icon {
   width: 40px;
   height: 40px;

@@ -28,37 +28,57 @@
 
 <body>
 
-<!-- ========================= HEADER ========================= -->
+<!-- HEADER -->
 <div class="header-wrapper">
-    <div class="header">
-      <button class="burger-menu" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
+    <header class="header">
+        <button class="burger-menu" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
 
-      <nav class="burger-dropdown">
-        <a href="#">Shop</a>
-        <a href="#">Collections</a>
-        <a href="#">Sale</a>
-      </nav>
+        <!-- Мобильное меню -->
+        <nav class="burger-dropdown">
+            <a href="catalog.html">Shop</a>
+            <a href="catalog.html">Collections</a>
+            <a href="catalog.html">Sale</a>
+        </nav>
 
-      <nav class="nav-left">
-        <a href="#">Shop</a>
-        <a href="#">Collections</a>
-        <a href="#">Sale</a>
-      </nav>
+        <!-- Десктопное меню -->
+        <nav class="nav-left">
+            <a href="../catalog/catalog.html">Shop</a>
+            <a href="../catalog/catalog.html">Collections</a>
+            <a href="../catalog/catalog.html">Sale</a>
+        </nav>
 
-      <div class="logo">
-        <img src="../header/svg/logo.svg" alt="Logo">
-      </div>
+        <!-- Логотип -->
+        <div class="logo">
+            <a href="../home-page/home-page.html">
+                <img src="../header/svg/logo.svg" alt="Lumora">
+            </a>
+        </div>
 
-      <div class="nav-right">
-        <img src="../header/svg/search.svg" class="icon" alt="Search">
-        <img src="../header/svg/profile.svg" class="icon" alt="Profile">
-        <img src="../header/svg/cart.svg" class="icon" alt="Cart">
-      </div>
-    </div>
+        <!-- Иконки -->
+        <div class="nav-right">
+                <img src="../header/svg/search.svg" class="icon" alt="Search icon">
+            </button>
+            
+            <!-- Личный кабинет -->
+            <a href="../account/account.html" class="icon-link" aria-label="My account">
+                <img src="../header/svg/profile.svg" class="icon" alt="Profile icon">
+            </a>
+            
+            <!-- Корзина -->
+            <a href="../cart/cart.html" class="icon-link" aria-label="Cart">
+                <img src="../header/svg/cart.svg" class="icon" alt="Cart icon">
+            </a>
+        </div>
+    </header>
 </div>
 
+    <link rel="stylesheet" href="../header/header.css">
+    <script src="../header/header.js"></script>
+</div>
 <!-- ========================= MAIN ========================= -->
 <main class="checkout-page">
 

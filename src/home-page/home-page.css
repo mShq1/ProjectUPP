@@ -1,0 +1,98 @@
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.glass-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%; /* Половина экрана */
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(95, 90, 90, 0.4) 0%, rgba(206, 200, 200, 0) 100%); /* Градиент от полупрозрачного к прозрачному */
+    backdrop-filter: blur(5px); /* Эффект размытия */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px;
+}
+
+/* Стиль для текста Lumora, который будет "вырезать" блюр */
+.lumora-text-cutout {
+    position: absolute;
+    top: 40px; /* Позиционирование сверху */
+    left: 20px; /* Позиционирование слева */
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    font-size: 80px; /* Большой размер */
+    color: rgba(255, 255, 255, 0.8); /* Почти белый цвет */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    z-index: 10;
+    
+    /* Ключевой эффект: текст становится "дыркой" в блюре */
+    mix-blend-mode: screen;
+    
+    /* Дополнительные эффекты для лучшей читаемости */
+    text-shadow: 
+        0 0 10px rgba(255, 255, 255, 0.3),
+        0 0 20px rgba(255, 255, 255, 0.2);
+    
+    /* Чтобы текст не мешал кликам */
+    pointer-events: none;
+}
+
+/* Альтернативный вариант с другим эффектом */
+.lumora-text-cutout.alternative {
+    mix-blend-mode: difference;
+    color: white;
+    text-shadow: 
+        2px 2px 4px rgba(0, 0, 0, 0.5),
+        -2px -2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.about-text {
+    width: 84px;
+    height: 42px;
+    opacity: 1;
+    color: #FFFFFF;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 28px;
+    line-height: 100%;
+    letter-spacing: 0;
+    vertical-align: middle;
+    position: relative;
+    top: 619px;
+    left: 25px;
+    /* Добавляем z-index чтобы был над текстом Lumora */
+    z-index: 20;
+}
+
+.main-text {
+    width: 622px;
+    height: 270px;
+    opacity: 1;
+    color: #FFFFFF;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 275;
+    font-style: ExtraLight;
+    font-size: 36px;
+    line-height: 100%;
+    letter-spacing: 0;
+    vertical-align: middle;
+    position: relative;
+    top: 633px;
+    left: 25px;
+    white-space: nowrap;
+    /* Добавляем z-index чтобы был над текстом Lumora */
+    z-index: 20;
+}
