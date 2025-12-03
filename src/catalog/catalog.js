@@ -37,16 +37,24 @@ function showErrorMessage(message) {
 
 // ================= SELECTORS =================
 const grid = document.getElementById("products-grid");
+const sortSelect = document.querySelector(".sort-select");
+const sortDrop = document.querySelector(".sort-dropdown");
+const sortValue = document.getElementById("sort-value");
 let products = [];
 let currentCategory = null;
 
-// ================= РЕНДЕРИНГ =================
+// ================= РЕНДЕРИНГ ПРОДУКТОВ =================
 function renderProducts() {
     renderFilteredProducts(products);
 }
 
 function renderFilteredProducts(productsToRender) {
-    if (!grid) return;
+    console.log('Rendering products:', productsToRender);
+    
+    if (!grid) {
+        console.error('Products grid element not found!');
+        return;
+    }
 
     grid.innerHTML = "";
 
@@ -54,35 +62,50 @@ function renderFilteredProducts(productsToRender) {
         const message = currentCategory 
             ? `No products found in ${currentCategory} category`
             : 'No products found';
-        grid.innerHTML = `<div class="no-products" style="grid-column: 1/-1; text-align: center; padding: 40px; color: #666;">
-            <h3>${message}</h3>
-            <p>Try adjusting your filters or check back later.</p>
-        </div>`;
+        
+        grid.innerHTML = `
+            <div class="no-products" style="grid-column: 1/-1; text-align: center; padding: 40px; color: #666;">
+                <h3>${message}</h3>
+                <p>Try adjusting your filters or check back later.</p>
+            </div>
+        `;
         return;
     }
 
+    // Используем createElement для лучшей производительности
     productsToRender.forEach(product => {
         const productName = product.name || 'Unnamed Product';
         const productPrice = parseFloat(product.price) || 0;
-
+        
+        // Безопасное получение изображения - используем image_url вместо image
         let imageUrl = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300' viewBox='0 0 300 300'%3E%3Crect width='300' height='300' fill='%23f5f5f5'/%3E%3Ctext x='50%25' y='50%25' font-size='14' text-anchor='middle' dy='.3em' fill='%23999'%3ENo Image%3C/text%3E%3C/svg%3E";
+        
         if (product.images && product.images.length > 0) {
+            // Пробуем получить image_url, если нет - используем image
             const firstImage = product.images[0];
             imageUrl = firstImage.image_url || firstImage.image || imageUrl;
         }
+
+        console.log(`Product: ${productName}, Image URL: ${imageUrl}`);
 
         const productCard = document.createElement('div');
         productCard.className = 'product-card';
         productCard.innerHTML = `
             <img src="${imageUrl}" alt="${productName}" 
                  onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27300%27 height=%27300%27 viewBox=%270 0 300 300%27%3E%3Crect width=%27300%27 height=%27300%27 fill=%27%23f8f8f8%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 font-size=%2714%27 text-anchor=%27middle%27 dy=%27.3em%27 fill=%27%23999%27%3EImage Error%3C/text%3E%3C/svg%3E'"
-                 style="width: 300px; height: 300px; border-radius: 25px; object-fit: contain; padding: 10px; display: block; margin: 0 auto;">
+                 style="width: 300px; height: 300px; border-radius: 25px; opacity: 1; object-fit: contain; background: #f8f8f8; padding: 10px; display: block; margin: 0 auto;">
             <div class="product-title">${productName}</div>
             <div class="product-price">$${productPrice.toFixed(2)}</div>
         `;
+        
+        // Добавляем обработчик клика для перехода на страницу товара
+        productCard.addEventListener('click', () => {
+            openProductDetail(product.id);
+        });
+        
+        // Добавляем курсор pointer чтобы показать что карточка кликабельна
         productCard.style.cursor = 'pointer';
-        productCard.addEventListener('click', () => openProductDetail(product.id));
-
+        
         grid.appendChild(productCard);
     });
 }
