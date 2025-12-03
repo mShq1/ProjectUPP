@@ -103,7 +103,7 @@ document.querySelector('.add-to-cart').onclick = () => {
         id: currentProduct.id,
         title: currentProduct.name,
         price: parseFloat(currentProduct.price),
-        img: currentProduct.images?.[0]?.image_url || '',
+        img: currentProduct.images?.[0]?.image || '',
         size: size,
         color: color
     };

@@ -27,22 +27,26 @@ function renderCart() {
 
     container.innerHTML = "";
 
-    cart.forEach(item => {
-        container.innerHTML += `
-            <div class="cart-card">
-                <img src="${item.img}" class="cart-card__img">
+    cart.forEach((item, index) => {
+    container.innerHTML += `
+        <div class="cart-card">
 
-                <div class="cart-card__info">
-                    <div>
-                        <div class="cart-card__title">${item.title}</div>
-                    </div>
+            <img src="${item.img}" class="cart-card__img">
 
-                    <div class="cart-card__price">$${item.price.toFixed(2)}</div>
-                </div>
+            <div class="cart-card__info">
+                <div class="cart-card__title">${item.title}</div>
+                <div class="cart-card__price">$${item.price.toFixed(2)}</div>
             </div>
-        `;
-    });
+
+            <button class="cart-remove-btn" onclick="removeFromCart(${index})">
+                <img src="../cart/delete.svg" alt="delete">
+            </button>
+        </div>
+    `;
+});
+
 }
+
 
 
 // ===== РЕНДЕР ORDER SUMMARY =====
@@ -72,4 +76,11 @@ function renderRecommendations() {
             </div>
         `;
     });
+}
+function removeFromCart(index) {
+    cart.splice(index, 1);   // удаляем товар
+    localStorage.setItem("cart", JSON.stringify(cart)); // сохраняем обновлённую корзину
+
+    renderCart();  // перерисовываем корзину
+    renderSummary(); // пересчёт суммы
 }
