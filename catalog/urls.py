@@ -1,20 +1,20 @@
 from django.urls import path
-from catalog.views import RegisterView, CustomAuthToken
 from .views import (
+    # Товары
     ProductListView,
     ProductDetailView,
+    # Корзина
     CartView,
     AddToCartView,
     RemoveFromCartView,
     ClearCartView,
+    # Заказы
     CreateOrderView,
     OrderListView,
     OrderDetailView,
 )
 
 urlpatterns = [
-    path('register/', RegisterView.as_view(), name='register'),
-    path('login/', CustomAuthToken.as_view(), name='login'),
     # Товары
     path('products/', ProductListView.as_view(), name='product-list'),
     path('products/<int:pk>/', ProductDetailView.as_view(), name='product-detail'),
@@ -30,6 +30,8 @@ urlpatterns = [
     path('orders/<int:pk>/', OrderDetailView.as_view(), name='order-detail'),
     path('orders/create/', CreateOrderView.as_view(), name='order-create'),
 ]
+
+
 
 # Как это работает:
 # Продукты
