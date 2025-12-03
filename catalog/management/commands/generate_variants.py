@@ -5,13 +5,11 @@ class Command(BaseCommand):
     help = 'Generate all combinations of sizes and colors for products, considering product type'
 
     def handle(self, *args, **kwargs):
-        # Определяем размеры по типу продукта
         sizes_by_type = {
             'clothing': ['S', 'M', 'L', 'XL'],
             'shoes': ['5', '6', '6.5', '7', '8', '10', '13.5'],
         }
 
-        # Общий список цветов (можно расширить или сделать индивидуально)
         colors = ['Black', 'White', 'Red', 'Purple', 'Gray']
 
         products = Product.objects.all()  # для всех товаров
