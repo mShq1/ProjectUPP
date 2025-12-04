@@ -129,7 +129,7 @@ function filterProductsByCategory(categoryName) {
     }
     
     const filteredProducts = products.filter(product => {
-        return product.category.name === categoryName;
+        return product.category_name === categoryName;
     });
     
     console.log(`Filtered products for ${categoryName}:`, filteredProducts);
@@ -224,7 +224,7 @@ function initializeFilters() {
                 // Sorting logic
                 const sortType = option.textContent;
                 let productsToSort = currentCategory 
-                    ? products.filter(p => p.category.name === currentCategory)
+                    ? products.filter(p => p.category_name === currentCategory)
                     : [...products];
                 
                 switch(sortType) {

@@ -4,10 +4,10 @@ __pycache__/
 *.pyo
 
 # база данных
-db.sqlite3
+# db.sqlite3
 
 # медиа и статика
-media/
+# media/
 staticfiles/
 
 # виртуальное окружение
