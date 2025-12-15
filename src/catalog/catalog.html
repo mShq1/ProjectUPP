@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catalog – Lumora</title>
 
     <link rel="stylesheet" href="../header/header.css">
@@ -81,8 +82,14 @@
     <!-- TOP ROW (left filters + right sorting) -->
     <div class="catalog-layout">
 
+        <!-- ================= MOBILE: FILTERS TOGGLE BUTTON ================= -->
+        <button class="filters-toggle-btn" id="filters-toggle-btn">
+            All filters
+        </button>
+
         <!-- ================= LEFT FILTER COLUMN ================= -->
-        <aside class="filters">
+        <aside class="filters" id="filters">
+            <button class="filters-close-btn" id="filters-close-btn">Apply Filters</button>
 
             <!-- SIZE -->
             <div class="filter-box">

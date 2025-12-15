@@ -142,7 +142,40 @@ document.addEventListener('DOMContentLoaded', function() {
     fetchProducts();
     initializeFilters();
     initializePriceFilter();
+    initializeMobileFilters();
 });
+
+// ================= МОБИЛЬНЫЕ ФИЛЬТРЫ =================
+function initializeMobileFilters() {
+    const filtersToggleBtn = document.getElementById('filters-toggle-btn');
+    const filters = document.getElementById('filters');
+    const filtersCloseBtn = document.getElementById('filters-close-btn');
+    
+    if (filtersToggleBtn && filters) {
+        filtersToggleBtn.addEventListener('click', function() {
+            filters.classList.add('active');
+            filtersToggleBtn.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Блокируем скролл фона
+        });
+        
+        if (filtersCloseBtn) {
+            filtersCloseBtn.addEventListener('click', function() {
+                filters.classList.remove('active');
+                filtersToggleBtn.classList.remove('active');
+                document.body.style.overflow = ''; // Разблокируем скролл
+            });
+        }
+        
+        // Закрытие при клике вне области фильтров
+        filters.addEventListener('click', function(e) {
+            if (e.target === filters) {
+                filters.classList.remove('active');
+                filtersToggleBtn.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+    }
+}
 
 // ================= ФИЛЬТРЫ И СОРТИРОВКА =================
 function initializeFilters() {

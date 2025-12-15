@@ -28,6 +28,7 @@ function renderCart() {
     container.innerHTML = "";
 
     cart.forEach((item, index) => {
+    const quantity = item.quantity || 1;
     container.innerHTML += `
         <div class="cart-card">
 
@@ -36,6 +37,13 @@ function renderCart() {
             <div class="cart-card__info">
                 <div class="cart-card__title">${item.title}</div>
                 <div class="cart-card__price">$${item.price.toFixed(2)}</div>
+                
+                <!-- Quantity controls -->
+                <div class="cart-quantity">
+                    <button class="quantity-btn" onclick="updateQuantity(${index}, -1)">-</button>
+                    <span class="quantity-value">${quantity}</span>
+                    <button class="quantity-btn" onclick="updateQuantity(${index}, 1)">+</button>
+                </div>
             </div>
 
             <button class="cart-remove-btn" onclick="removeFromCart(${index})">
@@ -51,7 +59,10 @@ function renderCart() {
 
 // ===== РЕНДЕР ORDER SUMMARY =====
 function renderSummary() {
-    let subtotal = cart.reduce((sum, item) => sum + item.price, 0);
+    let subtotal = cart.reduce((sum, item) => {
+        const quantity = item.quantity || 1;
+        return sum + (item.price * quantity);
+    }, 0);
     let discount = subtotal > 0 ? 13 : 0;  
     let total = subtotal - discount;
 
@@ -83,4 +94,17 @@ function removeFromCart(index) {
 
     renderCart();  // перерисовываем корзину
     renderSummary(); // пересчёт суммы
+}
+
+function updateQuantity(index, change) {
+    if (!cart[index]) return;
+    
+    const currentQuantity = cart[index].quantity || 1;
+    const newQuantity = Math.max(1, currentQuantity + change);
+    
+    cart[index].quantity = newQuantity;
+    localStorage.setItem("cart", JSON.stringify(cart));
+    
+    renderCart();
+    renderSummary();
 }

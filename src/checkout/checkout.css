@@ -677,3 +677,169 @@
         font-size: 28px;
     }
 }
+
+@media (max-width: 768px) {
+    .checkout-page {
+        padding: 20px 16px 40px;
+    }
+    
+    .checkout-container {
+        max-width: 100%;
+    }
+    
+    .checkout-title {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    
+    .section-title {
+        font-size: 18px;
+        margin-bottom: 14px;
+    }
+    
+    /* Все поля на 100% ширины */
+    .fields-row {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .field input {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    /* Shipping type - вертикально */
+    .shipping-type {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .shipping-type__option {
+        width: 100%;
+        text-align: left;
+        padding: 14px;
+    }
+    
+    /* Shipping options - вертикально */
+    .shipping-methods {
+        gap: 10px;
+    }
+    
+    .shipping-option {
+        width: 100%;
+        min-height: auto;
+        padding: 14px;
+    }
+    
+    .shipping-option__content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+    
+    .shipping-option__price {
+        align-self: flex-end;
+        margin-left: 0;
+        padding-left: 0;
+    }
+    
+    /* Payment methods - вертикально */
+    .payment-methods {
+        gap: 8px;
+    }
+    
+    .payment-tab {
+        width: 100%;
+        text-align: left;
+        padding-left: 16px;
+    }
+    
+    /* Payment card fields - одноколоночно */
+    .payment-card__fields {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .payment-card__field--wide {
+        grid-column: 1;
+    }
+    
+    /* Order Summary */
+    .order-summary {
+        margin-top: 24px;
+    }
+    
+    .order-summary h2 {
+        font-size: 24px;
+        margin-bottom: 14px;
+    }
+    
+    .order-summary__row {
+        font-size: 14px;
+    }
+    
+    .order-summary__total {
+        font-size: 20px;
+    }
+    
+    /* Perfect addition & Cart */
+    .addon-card,
+    .cart-card {
+        padding: 10px;
+    }
+    
+    .addon-card__img,
+    .cart-card__img {
+        width: 60px;
+        height: 60px;
+    }
+    
+    /* Buttons */
+    .checkout-button {
+        margin-top: 20px;
+        height: 52px;
+        font-size: 16px;
+        font-weight: 600;
+    }
+    
+    .alternative-payment__button {
+        height: 52px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .checkout-page {
+        padding: 16px 12px 30px;
+    }
+    
+    .checkout-title {
+        font-size: 22px;
+    }
+    
+    .section-title {
+        font-size: 16px;
+    }
+    
+    .field input {
+        height: 48px;
+        font-size: 14px;
+    }
+    
+    .shipping-option,
+    .payment-tab {
+        padding: 12px;
+    }
+    
+    .payment-card {
+        padding: 16px;
+    }
+    
+    .order-summary {
+        padding: 16px;
+    }
+    
+    .order-summary h2 {
+        font-size: 22px;
+    }
+}

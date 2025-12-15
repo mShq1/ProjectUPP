@@ -117,3 +117,130 @@
     font-family: "Poppins", sans-serif;
     font-weight: 700;
 }
+
+/* ===== МОБИЛЬНАЯ АДАПТАЦИЯ ===== */
+@media (max-width: 768px) {
+    .account-page {
+        padding: 20px 16px;
+    }
+    
+    .account-title {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    
+    .logout-link {
+        font-size: 14px;
+        display: block;
+        margin-top: 8px;
+    }
+    
+    /* Карточный layout - одна колонка */
+    .account-sections {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        column-gap: 0;
+        row-gap: 20px;
+    }
+    
+    .section-card {
+        height: auto;
+        min-height: 200px;
+        padding: 20px;
+        border-radius: 18px;
+    }
+    
+    .section-header {
+        padding-bottom: 20px;
+        margin-bottom: 16px;
+    }
+    
+    .section-header h2 {
+        font-size: 20px;
+    }
+    
+    .icon {
+        width: 36px;
+        height: 36px;
+        margin-right: 10px;
+    }
+    
+    .edit-link {
+        font-size: 13px;
+        margin-left: auto;
+    }
+    
+    .section-content {
+        margin-top: 20px;
+        font-size: 14px;
+    }
+    
+    .info-row {
+        flex-direction: column;
+        gap: 16px;
+        margin-bottom: 16px;
+    }
+    
+    .info-item {
+        width: 100%;
+    }
+    
+    .label {
+        font-size: 16px;
+    }
+    
+    .value {
+        font-size: 14px;
+    }
+    
+    .section-content p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+}
+
+@media (max-width: 480px) {
+    .account-page {
+        padding: 16px 12px;
+    }
+    
+    .account-title {
+        font-size: 22px;
+    }
+    
+    .section-card {
+        padding: 16px;
+        border-radius: 16px;
+    }
+    
+    .section-header {
+        padding-bottom: 16px;
+        margin-bottom: 12px;
+    }
+    
+    .section-header h2 {
+        font-size: 18px;
+    }
+    
+    .icon {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .section-content {
+        margin-top: 16px;
+    }
+    
+    .info-row {
+        gap: 12px;
+        margin-bottom: 12px;
+    }
+    
+    .label {
+        font-size: 15px;
+    }
+    
+    .value {
+        font-size: 13px;
+    }
+}
