@@ -5,16 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout – Lumora</title>
 
-    <!-- Шрифты -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Подключаем стили header/footer -->
     <link rel="stylesheet" href="../header/header.css">
     <link rel="stylesheet" href="../footer/footer.css">
 
-    <!-- Стили Checkout -->
     <link rel="stylesheet" href="checkout.css">
 
     <style>
@@ -29,7 +26,6 @@
 
 <body>
 
-<!-- HEADER -->
 <div class="header-wrapper">
     <header class="header">
         <button class="burger-menu" aria-label="Open menu">
@@ -38,38 +34,33 @@
             <span></span>
         </button>
 
-        <!-- Мобильное меню -->
         <nav class="burger-dropdown">
             <a href="catalog.html">Shop</a>
             <a href="catalog.html">Collections</a>
             <a href="catalog.html">Sale</a>
         </nav>
 
-        <!-- Десктопное меню -->
         <nav class="nav-left">
             <a href="../catalog/catalog.html">Shop</a>
             <a href="../catalog/catalog.html">Collections</a>
             <a href="../catalog/catalog.html">Sale</a>
         </nav>
 
-        <!-- Логотип -->
         <div class="logo">
             <a href="../home-page/home-page.html">
                 <img src="../header/svg/logo.svg" alt="Lumora">
             </a>
         </div>
 
-        <!-- Иконки -->
         <div class="nav-right">
                 <img src="../header/svg/search.svg" class="icon" alt="Search icon">
             </button>
             
-            <!-- Личный кабинет -->
+
             <a href="../account/account.html" class="icon-link" aria-label="My account">
                 <img src="../header/svg/profile.svg" class="icon" alt="Profile icon">
             </a>
-            
-            <!-- Корзина -->
+
             <a href="../cart/cart.html" class="icon-link" aria-label="Cart">
                 <img src="../header/svg/cart.svg" class="icon" alt="Cart icon">
             </a>
@@ -80,13 +71,12 @@
     <link rel="stylesheet" href="../header/header.css">
     <script src="../header/header.js"></script>
 </div>
-<!-- ========================= MAIN ========================= -->
+
 <main class="checkout-page">
 
     <div class="checkout-container">
         <section class="checkout">
 
-            <!-- =============== LEFT COLUMN =============== -->
             <div class="checkout__left">
 
                 <!-- Contact -->
@@ -116,11 +106,10 @@
                     </div>
                 </section>
 
-                <!-- Shipping -->
+
                 <section class="checkout-block">
                     <h2 class="section-title">Shipping</h2>
 
-                    <!-- Кнопки переключения Ship To Address / Ship To Access Point -->
                     <div class="shipping-type">
                         <div class="shipping-type__option shipping-type__option--active" data-type="address">
                             <div class="shipping-type__content">
@@ -136,7 +125,6 @@
                         </div>
                     </div>
 
-                    <!-- Поля для Ship To Address -->
                     <div class="shipping-address-fields">
                         <div class="fields-row">
                             <div class="field">
@@ -156,7 +144,6 @@
                         </div>
                     </div>
 
-                    <!-- Поля для Ship To Access Point -->
                     <div class="shipping-access-point">
                         <div class="fields-row">
                             <div class="field">
@@ -172,7 +159,6 @@
                         </div>
                     </div>
 
-                    <!-- Shipping Methods - только для Ship To Address -->
                     <div class="shipping-methods shipping-methods-address">
                         <label class="shipping-option shipping-option--active">
                             <input type="radio" name="shipping" checked>
@@ -208,12 +194,11 @@
                         </label>
                     </div>
 
-                    <!-- Shipping Methods - только для Ship To Access Point (только бесплатная доставка) -->
+                    
                     <div class="shipping-methods shipping-methods-access-point">
                     </div>
                 </section>
 
-                <!-- Payment -->
                 <section class="checkout-block">
                     <h2 class="section-title">Payment</h2>
 
@@ -223,15 +208,12 @@
                         <button class="payment-tab" data-method="alternative">Alternative Pay</button>
                     </div>
 
-                    <!-- Credit Card Form -->
 <div class="payment-card">
     <div class="payment-card__fields">
-        <!-- 1 ряд: Card Number (занимает обе колонки) -->
         <div class="payment-card__field payment-card__field--wide">
             <input type="text" placeholder="Card Number*">
         </div>
 
-        <!-- 2 ряд: CVV и Expire Date -->
         <div class="payment-card__field">
             <input type="text" placeholder="CVV*">
         </div>
@@ -240,21 +222,17 @@
             <input type="text" placeholder="Expire Date*">
         </div>
 
-        <!-- 3 ряд: Cardholder Name (занимает обе колонки) -->
         <div class="payment-card__field payment-card__field--wide">
             <input type="text" placeholder="Cardholder Name*">
         </div>
     </div>
 </div>
 
-                    <!-- PayPal -->
                     <div class="alternative-payment" id="paypal-payment">
                         <div class="alternative-payment__title">PayPal</div>
                         <div class="alternative-payment__description">You will be redirected to PayPal to complete your payment securely</div>
                         <button class="alternative-payment__button">Continue with PayPal</button>
                     </div>
-
-                    <!-- Alternative Pay -->
                     <div class="alternative-payment" id="alternative-payment">
                         <div class="alternative-payment__title">Alternative Payment Methods</div>
                         <div class="alternative-payment__description">Choose from various payment options including Apple Pay, Google Pay, and more</div>
@@ -264,11 +242,8 @@
                     <button class="checkout-button">Confirm &amp; Pay</button>
                 </section>
             </div>
-
-            <!-- =============== RIGHT COLUMN =============== -->
             <aside class="checkout__right">
 
-                <!-- Order Summary -->
 <section class="order-summary">
     <h2>Order Summary</h2>
 
@@ -295,7 +270,6 @@
     </div>
 </section>
 
-                <!-- Perfect addition -->
                 <section class="perfect-addition">
                     <h3>Perfect addition</h3>
 
@@ -309,7 +283,6 @@
                     </article>
                 </section>
 
-                <!-- Cart -->
                 <section class="your-cart">
                     <h3>Your Cart</h3>
 
@@ -331,7 +304,6 @@
 
 </main>
 
-<!-- ========================= FOOTER ========================= -->
 <div class="footer-wrapper">
     <footer class="footer">
         <div class="footer-top">
@@ -354,7 +326,6 @@
                         <li><a href="#">Terms of Sale</a></li>
                         <li><a href="#">Privacy Policy</a></li>
                         <li><a href="#">Rewards Terms</a></li>
-                        <!-- Измененная ссылка: -->
                         <li><a href="../about-us/about-us.html">About us</a></li>
                     </ul>
                 </div>
@@ -390,15 +361,12 @@
     </footer>
 </div>
 
-<!-- Подключение CSS для футера -->
 <link rel="stylesheet" href="../footer/footer.css">
-<!-- ========================= SCRIPTS ========================= -->
 <script src="../header/header.js"></script>
 <script src="../footer/footer.js"></script>
 <script src="checkout.js"></script>
 
 <script>
-// Shipping type switching
 document.addEventListener('DOMContentLoaded', function() {
     const shippingTypeOptions = document.querySelectorAll('.shipping-type__option');
     
@@ -418,32 +386,27 @@ document.addEventListener('DOMContentLoaded', function() {
     
     shippingTypeOptions.forEach(option => {
         option.addEventListener('click', function() {
-            // Remove active class from all options
             shippingTypeOptions.forEach(opt => opt.classList.remove('shipping-type__option--active'));
             
-            // Add active class to clicked option
+
             this.classList.add('shipping-type__option--active');
             
             const type = this.getAttribute('data-type');
             updateShippingDisplay(type);
         });
     });
-    
-    // Shipping option selection
+
     const shippingOptions = document.querySelectorAll('.shipping-option');
     
     shippingOptions.forEach(option => {
         option.addEventListener('click', function() {
-            // Remove active class from all options in the same group
             const group = this.closest('.shipping-methods');
             group.querySelectorAll('.shipping-option').forEach(opt => {
                 opt.classList.remove('shipping-option--active');
             });
-            
-            // Add active class to clicked option
+
             this.classList.add('shipping-option--active');
-            
-            // Check the radio input
+
             const radio = this.querySelector('input[type="radio"]');
             if (radio) {
                 radio.checked = true;
@@ -451,19 +414,18 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Payment method switching
+
     const paymentTabs = document.querySelectorAll('.payment-tab');
     const paymentCard = document.querySelector('.payment-card');
     const paypalPayment = document.getElementById('paypal-payment');
     const alternativePayment = document.getElementById('alternative-payment');
     
     function updatePaymentDisplay(method) {
-        // Hide all payment methods first
+
         paymentCard.style.display = 'none';
         if (paypalPayment) paypalPayment.style.display = 'none';
         if (alternativePayment) alternativePayment.style.display = 'none';
-        
-        // Show selected payment method
+
         if (method === 'credit-card') {
             paymentCard.style.display = 'block';
         } else if (method === 'paypal' && paypalPayment) {
@@ -475,10 +437,10 @@ document.addEventListener('DOMContentLoaded', function() {
     
     paymentTabs.forEach(tab => {
         tab.addEventListener('click', function() {
-            // Remove active class from all tabs
+
             paymentTabs.forEach(t => t.classList.remove('payment-tab--active'));
             
-            // Add active class to clicked tab
+
             this.classList.add('payment-tab--active');
             
             const method = this.getAttribute('data-method');
@@ -486,7 +448,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Initialize displays
     updateShippingDisplay('address');
     updatePaymentDisplay('credit-card');
 });

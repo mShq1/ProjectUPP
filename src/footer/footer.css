@@ -8,7 +8,7 @@
   box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.05);
 }
 
-/* --- Верхняя часть футера --- */
+
 .footer-top {
   display: flex;
   justify-content: space-between;
@@ -17,7 +17,7 @@
   box-sizing: border-box;
 }
 
-/* --- Левая и правая группы колонок --- */
+
 .footer-left {
   display: flex;
   gap: 120px;
@@ -28,7 +28,7 @@
   gap: 38px; 
 }
 
-/* --- Общие стили колонок --- */
+
 .footer-col {
   display: flex;
   flex-direction: column;
@@ -43,7 +43,7 @@
   margin: 0 0 16px 0;
 }
 
-/* --- Списки ссылок --- */
+
 .footer-col ul {
   list-style: none;
   margin: 0;
@@ -67,7 +67,7 @@
   color: #007bc1;
 }
 
-/* --- Join Us --- */
+
 .join h4 {
   margin-bottom: 12px;
 }
@@ -98,7 +98,6 @@
   background-color: #333;
 }
 
-/* --- Connect With Us --- */
 .connect h4 {
   margin-bottom: 17px;
 }
@@ -123,7 +122,6 @@
   transform: scale(1.05);
 }
 
-/* --- Нижняя часть футера --- */
 .footer-bottom {
   border-top: 1px solid rgba(0, 0, 0, 0.05);
   display: flex;
@@ -148,7 +146,6 @@
   display: block;
 }
 
-/* ===== МОБИЛЬНАЯ АДАПТАЦИЯ ===== */
 @media (max-width: 768px) {
   .footer-top {
     flex-direction: column;
@@ -185,7 +182,7 @@
     font-size: 13px;
   }
   
-  /* Join Us */
+
   .join p {
     font-size: 13px;
     margin-bottom: 14px;
@@ -198,7 +195,7 @@
     border-radius: 24px;
   }
   
-  /* Connect With Us */
+
   .connect h4 {
     margin-bottom: 14px;
   }
@@ -214,7 +211,7 @@
     padding: 8px;
   }
   
-  /* Footer bottom */
+
   .footer-bottom {
     flex-direction: column;
     align-items: flex-start;

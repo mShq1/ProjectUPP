@@ -1,4 +1,4 @@
-// ===== MOCK DATA (в будущем заменишь API вызовом) =====
+
 const catalogMock = [
     { id: 1, title: "Men's PFG Pro Sport Boot", price: 137, img: "../catalog/test-product.jpg" },
     { id: 2, title: "Grey Ice Sneakers", price: 89, img: "../catalog/test-product.jpg" },
@@ -7,16 +7,14 @@ const catalogMock = [
     { id: 5, title: "Blue Windbreaker", price: 95, img: "../catalog/test-product.jpg" }
 ];
 
-// ===== Корзина хранится в localStorage =====
+
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-// ===== Инициализация =====
 renderCart();
 renderSummary();
 renderRecommendations();
 
 
-// ===== РЕНДЕР КОРЗИНЫ =====
 function renderCart() {
     const container = document.getElementById("cart-items");
 

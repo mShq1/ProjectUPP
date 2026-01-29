@@ -1,4 +1,4 @@
-/* Категории под заголовком CATEGORY */
+
 .category-section {
     width: 100%;
     padding: 0 120px 100px;
@@ -11,7 +11,6 @@
     margin: 0 auto;
 }
 
-/* Основное изображение категории */
 .category-main-image {
     width: 1360px;
     height: 700px;
@@ -21,14 +20,12 @@
     display: block;
 }
 
-/* Контейнер для позиционирования */
 .category-image-wrapper {
     position: relative;
     display: inline-block;
     width: 100%;
 }
 
-/* Контент поверх изображения */
 .category-content-overlay {
     position: absolute;
     top: 0;
@@ -37,7 +34,6 @@
     height: 100%;
 }
 
-/* Левое меню с кнопками - МЕНЬШЕ */
 .category-menu {
     position: absolute;
     bottom: 30px;
@@ -91,7 +87,6 @@
     border-radius: 0 2px 2px 0;
 }
 
-/* Правый информационный блок - В ПРАВОМ НИЖНЕМ УГЛУ */
 .category-info {
     position: absolute;
     bottom: 30px;
@@ -120,7 +115,6 @@
     color: rgba(255, 255, 255, 0.9);
 }
 
-/* Кнопка-ссылка Shop category */
 .category-shop-btn {
     display: inline-block;
     background: white;
@@ -133,18 +127,17 @@
     border-radius: 6px;
     cursor: pointer;
     transition: all 0.3s ease;
-    text-decoration: none; /* Убираем подчеркивание ссылки */
+    text-decoration: none; 
     text-align: center;
 }
 
 .category-shop-btn:hover {
     background: #f0f0f0;
     transform: translateY(-2px);
-    text-decoration: none; /* Убираем подчеркивание при наведении */
+    text-decoration: none; 
     color: black;
 }
 
-/* Адаптивность */
 @media (max-width: 1400px) {
     .category-section {
         padding: 0 80px 80px;

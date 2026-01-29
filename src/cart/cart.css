@@ -14,7 +14,6 @@
     gap: 32px;
 }
 
-/* ===== CART ITEMS ===== */
 .cart-items {
     display: flex;
     flex-direction: column;
@@ -31,7 +30,6 @@
     color: #555;
 }
 
-/* ===== SINGLE CART CARD ===== */
 .cart-card {
     display: flex;
     gap: 16px;
@@ -67,7 +65,6 @@
     color: #7057DF;
 }
 
-/* ===== ORDER SUMMARY ===== */
 .order-summary {
     background: #fff;
     padding: 24px;
@@ -127,7 +124,6 @@
     cursor: pointer;
 }
 
-/* ===== Заголовки с Poppins ===== */
 .cart-title,
 .section-title,
 .order-summary h2 {
@@ -135,7 +131,6 @@
     font-weight: 600;
 }
 
-/* ===== Заголовки как Your Cart ===== */
 .cart-title,
 .section-title,
 .order-summary h2 {
@@ -146,7 +141,6 @@
     margin-bottom: 24px;
 }
 
-/* COMPLETE THE STYLE и YOU MAY ALSO LIKE чуть меньше */
 .section-title {
     font-size: 22px;
     margin: 40px 0 16px;
@@ -154,16 +148,15 @@
     color: #1A1A28;
 }
 
-/* ===== Order Summary — центрируем только заголовок ===== */
+
 .order-summary h2 {
     text-align: center;
-    margin-top: 2px;      /* вот ЭТО уменьшает отступ сверху */
-    margin-bottom: 12px;  /* можно тоже чуть ужать низ, если надо */
+    margin-top: 2px;      
+    margin-bottom: 12px;  
 }
 
 
 
-/* возвращаем order-summary в исходное состояние */
 .order-summary {
     background: #fff;
     padding: 24px;
@@ -172,12 +165,10 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
-    /* убрали align-items:center чтобы не ломать layout */
 }
 
 
 
-/* ===== RECOMMENDATIONS ===== */
 .section-title {
     margin: 40px 0 16px;
     font-size: 22px;
@@ -190,7 +181,6 @@
     gap: 20px;
 }
 
-/* ===== КНОПКА УДАЛЕНИЯ ===== */
 .cart-remove-btn {
     width: 40px;
     height: 40px;
@@ -211,11 +201,10 @@
 }
 
 .cart-remove-btn:hover {
-    border-color: #E53935; /* красное кольцо */
+    border-color: #E53935;
     background: #fff5f5;
 }
 
-/* ===== МОБИЛЬНАЯ АДАПТАЦИЯ ===== */
 @media (max-width: 768px) {
     .cart-page {
         padding: 20px 16px;
@@ -226,13 +215,11 @@
         margin-bottom: 20px;
     }
     
-    /* Вертикальный layout */
     .cart-grid {
         grid-template-columns: 1fr;
         gap: 24px;
     }
     
-    /* Cart items */
     .cart-items {
         gap: 12px;
     }
@@ -261,7 +248,7 @@
         font-size: 18px;
     }
     
-    /* Quantity controls */
+
     .cart-quantity {
         display: flex;
         align-items: center;
@@ -305,7 +292,6 @@
         margin-top: 8px;
     }
     
-    /* Order Summary */
     .order-summary {
         position: sticky;
         bottom: 0;
@@ -348,13 +334,11 @@
         margin-top: 12px;
     }
     
-    /* Section titles */
     .section-title {
         font-size: 20px;
         margin: 32px 0 16px;
     }
     
-    /* Recommendations */
     .recommend-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 16px;

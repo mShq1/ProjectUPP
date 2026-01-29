@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="home-page.css">
 <link rel="stylesheet" href="home-category.css">
-<!-- HEADER -->
+
 <div class="header-wrapper">
     <header class="header">
         <button class="burger-menu" aria-label="Open menu">
@@ -9,37 +9,32 @@
             <span></span>
         </button>
 
-        <!-- Мобильное меню -->
+
         <nav class="burger-dropdown">
             <a href="catalog.html">Shop</a>
             <a href="catalog.html">Collections</a>
             <a href="catalog.html">Sale</a>
         </nav>
 
-        <!-- Десктопное меню -->
         <nav class="nav-left">
             <a href="../catalog/catalog.html">Shop</a>
             <a href="../catalog/catalog.html">Collections</a>
             <a href="../catalog/catalog.html">Sale</a>
         </nav>
 
-        <!-- Логотип -->
         <div class="logo">
             <a href="../home-page/home-page.html">
                 <img src="../header/svg/logo.svg" alt="Lumora">
             </a>
         </div>
 
-        <!-- Иконки -->
         <div class="nav-right">
             <img src="../header/svg/search.svg" class="icon" alt="Search icon">
-            
-            <!-- Личный кабинет -->
+
             <a href="../account/account.html" class="icon-link" aria-label="My account">
                 <img src="../header/svg/profile.svg" class="icon" alt="Profile icon">
             </a>
-            
-            <!-- Корзина -->
+
             <a href="../cart/cart.html" class="icon-link" aria-label="Cart">
                 <img src="../header/svg/cart.svg" class="icon" alt="Cart icon">
             </a>
@@ -54,15 +49,11 @@
     </video>
     
     <div class="glass-effect">
-        <!-- ВМЕСТО ТЕКСТА - ИЗОБРАЖЕНИЕ SVG -->
         <img src="../home-page/view/Lumora.svg" alt="LUMORA" class="lumora-image">
         
-        <!-- Текст About -->
         <div class="about-text">
             About
         </div>
-        
-        <!-- Основной текст -->
         <div class="main-text">
             Defined by minimal expression.<br>
             Crafted with precision and ease.<br>
@@ -73,11 +64,9 @@
     </div>
 </div>
 
-<!-- Секция с заголовками -->
 <section class="titles-section">
     <div class="titles-container">
         <div class="titles-column">
-            <!-- Заголовок CATEGORY -->
             <div class="title-item">
                 <h3>CATEGORY</h3>
             </div>
@@ -85,16 +74,13 @@
     </div>
 </section>
 
-<!-- Секция категорий - ПРЯМО ПОД CATEGORY -->
 <section class="category-section">
     <div class="category-container">
         <div style="position: relative;">
-            <!-- Основное изображение -->
             <img src="../home-page/view/image 2.svg" alt="Category" class="category-main-image" id="category-main-image">
-            
-            <!-- Контент поверх изображения -->
+
             <div class="category-content-overlay">
-                <!-- Левое меню -->
+
                 <div class="category-menu">
                     <div class="category-buttons">
                         <button class="category-btn active" data-image="image 2.svg" data-title="New & Trending" data-description="Our new collection inspired by Darth Vader is available now. But don't wait, this special-edition gear won't last long.">
@@ -123,8 +109,7 @@
                         </button>
                     </div>
                 </div>
-                
-                <!-- Правый информационный блок - в правом нижнем углу -->
+
                 <div class="category-info">
                     <h2 class="category-info-title">New & Trending</h2>
                     <p class="category-info-description">
@@ -137,7 +122,6 @@
     </div>
 </section>
 
-<!-- Заголовок BESTSELLERS -->
 <section class="titles-section" style="padding-top: 0;">
     <div class="titles-container">
         <div class="titles-column">
@@ -148,9 +132,7 @@
     </div>
 </section>
 
-<!-- Здесь будет секция BESTSELLERS (если нужно) -->
 
-<!-- Заголовок LATEST COLLECTIONS -->
 <section class="titles-section" style="padding-top: 0;">
     <div class="titles-container">
         <div class="titles-column">
@@ -161,10 +143,9 @@
     </div>
 </section>
 
-<!-- Секция с коллекциями - ПОД LATEST COLLECTIONS -->
 <section class="collections-section">
     <div class="collections-grid">
-        <!-- Изображение 1: Star Wars -->
+
         <div class="collection-item">
             <img src="../home-page/view/Frame 301.svg" alt="New Star Wars Gear" class="collection-image">
             <div class="collection-text-content">
@@ -174,8 +155,7 @@
                 </p>
             </div>
         </div>
-        
-        <!-- Изображение 2: Snow Titanium -->
+
         <div class="collection-item">
             <img src="../home-page/view/snow-titanium-hp.svg" alt="First Lift To Last Run" class="collection-image">
             <div class="collection-text-content">
@@ -185,8 +165,7 @@
                 </p>
             </div>
         </div>
-        
-        <!-- Изображение 3: Fleece -->
+
         <div class="collection-item">
             <img src="../home-page/view/09-30_1761518_Fleece_Subhero_v0.svg" alt="Fleece Favorites" class="collection-image">
             <div class="collection-text-content">
@@ -202,7 +181,6 @@
 <link rel="stylesheet" href="../header/header.css">
 <script src="../header/header.js"></script>
 
-<!-- FOOTER -->
 <div class="footer-wrapper">
     <footer class="footer">
         <div class="footer-top">
@@ -225,7 +203,6 @@
                         <li><a href="#">Terms of Sale</a></li>
                         <li><a href="#">Privacy Policy</a></li>
                         <li><a href="#">Rewards Terms</a></li>
-                        <!-- Измененная ссылка: -->
                         <li><a href="../about-us/about-us.html">About us</a></li>
                     </ul>
                 </div>
@@ -261,12 +238,9 @@
     </footer>
 </div>
 
-<!-- Подключение CSS для футера -->
 <link rel="stylesheet" href="../footer/footer.css">
 
-<!-- Подключение JS для категорий -->
 <script>
-// Добавьте этот скрипт в конец или в home-page.js
 document.addEventListener('DOMContentLoaded', function() {
     const categoryButtons = document.querySelectorAll('.category-btn');
     const mainImage = document.getElementById('category-main-image');
@@ -276,22 +250,17 @@ document.addEventListener('DOMContentLoaded', function() {
     if (categoryButtons.length && mainImage) {
         categoryButtons.forEach(button => {
             button.addEventListener('click', function() {
-                // Убираем активный класс у всех кнопок
                 categoryButtons.forEach(btn => btn.classList.remove('active'));
-                
-                // Добавляем активный класс текущей кнопке
+
                 this.classList.add('active');
-                
-                // Получаем данные из data-атрибутов
+
                 const imageSrc = this.getAttribute('data-image');
                 const title = this.getAttribute('data-title');
                 const description = this.getAttribute('data-description');
-                
-                // Обновляем изображение
+
                 mainImage.src = `../home-page/view/${imageSrc}`;
                 mainImage.alt = title;
-                
-                // Обновляем заголовок и описание
+
                 if (infoTitle) infoTitle.textContent = title;
                 if (infoDescription) infoDescription.textContent = description;
             });

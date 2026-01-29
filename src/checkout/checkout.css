@@ -1,10 +1,9 @@
-/* ===== Общая страница ===== */
+
 .checkout-page {
     padding: 20px 80px 80px;
     background: #f6f6f8;
 }
 
-/* ===== ОСНОВНАЯ СЕТКА ===== */
 .checkout {
     display: grid;
     grid-template-columns: minmax(0, 1fr) 360px;
@@ -26,7 +25,6 @@
     margin-top: 0;
 }
 
-/* ===== Заголовок Checkout ===== */
 .checkout-title {
     font-size: 36px;
     font-weight: 700;
@@ -37,7 +35,6 @@
     letter-spacing: 0%;
 }
 
-/* ===== Заголовки секций (Contact, Shipping, Payment) ===== */
 .section-title {
     width: 100%;
     height: 26px;
@@ -51,7 +48,6 @@
     vertical-align: middle;
 }
 
-/* ===== Контейнеры ===== */
 .order-summary {
     background: #fff;
     border-radius: 16px;
@@ -77,7 +73,6 @@
     margin-bottom: 0;
 }
 
-/* ===== ПОЛЯ ВВОДА ===== */
 .fields-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -139,7 +134,6 @@
     grid-column: 1 / -1;
 }
 
-/* ===== Shipping Type Selection ===== */
 .shipping-type {
     display: flex;
     gap: 12px;
@@ -179,7 +173,6 @@
     color: #9A9AB0;
 }
 
-/* ===== Shipping Options ===== */
 .shipping-methods {
     display: flex;
     flex-direction: column;
@@ -261,12 +254,10 @@
     font-weight: 700;
 }
 
-/* ===== Поля для Access Point ===== */
 .shipping-access-point {
     display: none;
 }
 
-/* Показываем соответствующие поля в зависимости от активного типа доставки */
 .shipping-type__option--active[data-type="address"] ~ .shipping-address-fields {
     display: grid;
 }
@@ -283,7 +274,6 @@
     display: block;
 }
 
-/* ===== Payment Methods ===== */
 .payment-methods {
     display: flex;
     flex-direction: column;
@@ -318,7 +308,6 @@
     background: rgba(112, 87, 223, 0.05);
 }
 
-/* ===== Payment Card ===== */
 .payment-card {
     border-radius: 16px;
     border: 1px solid #D7D7DF;
@@ -374,7 +363,6 @@
     box-shadow: 0 0 0 2px rgba(112, 87, 223, 0.1);
 }
 
-/* ===== Alternative Payment Methods ===== */
 .alternative-payment {
     display: none;
     border-radius: 16px;
@@ -420,7 +408,6 @@
     box-shadow: 0 4px 12px rgba(112, 87, 223, 0.3);
 }
 
-/* ===== Кнопка Confirm ===== */
 .checkout-button {
     margin-top: 16px;
     width: 100%;
@@ -442,7 +429,6 @@
     box-shadow: 0 4px 12px rgba(112, 87, 223, 0.3);
 }
 
-/* ===== Order Summary ===== */
 .order-summary h2 {
     font-size: 36px;
     margin-bottom: 16px;
@@ -483,7 +469,6 @@
     color: #7057DF;
 }
 
-/* Убираем старую зачеркнутую цену */
 .order-summary__old-total {
     display: none;
 }
@@ -494,7 +479,6 @@
     color: #7057DF;
 }
 
-/* ===== Perfect addition / Cart ===== */
 .perfect-addition h3,
 .your-cart h3 {
     font-size: 16px;
@@ -546,7 +530,6 @@
     color: #7057DF;
 }
 
-/* ===== Cart cards ===== */
 .cart-card {
     display: flex;
     gap: 12px;
@@ -590,7 +573,7 @@
     color: #7057DF;
 }
 
-/* ===== Дополнительные утилиты ===== */
+
 .access-point-info {
     background: #F9F9FB;
     border-radius: 12px;
@@ -611,7 +594,7 @@
     color: #9A9AB0;
 }
 
-/* ====== АДАПТИВ ====== */
+
 @media (max-width: 900px) {
     .checkout {
         grid-template-columns: 1fr;
@@ -697,7 +680,7 @@
         margin-bottom: 14px;
     }
     
-    /* Все поля на 100% ширины */
+
     .fields-row {
         grid-template-columns: 1fr;
         gap: 12px;
@@ -708,7 +691,7 @@
         box-sizing: border-box;
     }
     
-    /* Shipping type - вертикально */
+
     .shipping-type {
         flex-direction: column;
         gap: 10px;
@@ -720,7 +703,7 @@
         padding: 14px;
     }
     
-    /* Shipping options - вертикально */
+
     .shipping-methods {
         gap: 10px;
     }
@@ -743,7 +726,7 @@
         padding-left: 0;
     }
     
-    /* Payment methods - вертикально */
+
     .payment-methods {
         gap: 8px;
     }
@@ -754,7 +737,7 @@
         padding-left: 16px;
     }
     
-    /* Payment card fields - одноколоночно */
+
     .payment-card__fields {
         grid-template-columns: 1fr;
         gap: 12px;
@@ -764,7 +747,6 @@
         grid-column: 1;
     }
     
-    /* Order Summary */
     .order-summary {
         margin-top: 24px;
     }
@@ -782,7 +764,6 @@
         font-size: 20px;
     }
     
-    /* Perfect addition & Cart */
     .addon-card,
     .cart-card {
         padding: 10px;
@@ -794,7 +775,6 @@
         height: 60px;
     }
     
-    /* Buttons */
     .checkout-button {
         margin-top: 20px;
         height: 52px;

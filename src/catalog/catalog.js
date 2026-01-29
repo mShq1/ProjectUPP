@@ -1,4 +1,4 @@
-// ================= ЗАПРОС К API =================
+// ЗАПРОС К API
 async function fetchProducts() {
     try {
         console.log('Fetching products from API...');
@@ -12,7 +12,7 @@ async function fetchProducts() {
         console.log('API response:', data);
         
         products = Array.isArray(data) ? data : [];
-        console.log(`✅ Loaded ${products.length} products`);
+        console.log(`Loaded ${products.length} products`);
 
         renderProducts();
     } catch (error) {
@@ -35,7 +35,7 @@ function showErrorMessage(message) {
     }
 }
 
-// ================= SELECTORS =================
+// SELECTORS 
 const grid = document.getElementById("products-grid");
 const sortSelect = document.querySelector(".sort-select");
 const sortDrop = document.querySelector(".sort-dropdown");
@@ -43,7 +43,7 @@ const sortValue = document.getElementById("sort-value");
 let products = [];
 let currentCategory = null;
 
-// ================= РЕНДЕРИНГ ПРОДУКТОВ =================
+// РЕНДЕРИНГ ПРОДУКТОВ
 function renderProducts() {
     renderFilteredProducts(products);
 }
@@ -110,7 +110,7 @@ function renderFilteredProducts(productsToRender) {
     });
 }
 
-// ================= ПЕРЕХОД НА СТРАНИЦУ ТОВАРА =================
+// ПЕРЕХОД НА СТРАНИЦУ ТОВАРА
 function openProductDetail(productId) {
     console.log('Opening product detail for ID:', productId);
     
@@ -118,7 +118,7 @@ function openProductDetail(productId) {
     window.location.href = `../product-detail/product-detail.html?id=${productId}`;
 }
 
-// ================= ФИЛЬТРАЦИЯ ПО КАТЕГОРИЯМ =================
+// ФИЛЬТРАЦИЯ ПО КАТЕГОРИЯМ
 function filterProductsByCategory(categoryName) {
     currentCategory = categoryName;
     
@@ -136,7 +136,7 @@ function filterProductsByCategory(categoryName) {
     renderFilteredProducts(filteredProducts);
 }
 
-// ================= ИНИЦИАЛИЗАЦИЯ =================
+// ИНИЦИАЛИЗАЦИЯ 
 document.addEventListener('DOMContentLoaded', function() {
     console.log('DOM loaded, initializing catalog...');
     fetchProducts();
@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeMobileFilters();
 });
 
-// ================= МОБИЛЬНЫЕ ФИЛЬТРЫ =================
+// МОБИЛЬНЫЕ ФИЛЬТРЫ
 function initializeMobileFilters() {
     const filtersToggleBtn = document.getElementById('filters-toggle-btn');
     const filters = document.getElementById('filters');
@@ -155,18 +155,17 @@ function initializeMobileFilters() {
         filtersToggleBtn.addEventListener('click', function() {
             filters.classList.add('active');
             filtersToggleBtn.classList.add('active');
-            document.body.style.overflow = 'hidden'; // Блокируем скролл фона
+            document.body.style.overflow = 'hidden'; 
         });
         
         if (filtersCloseBtn) {
             filtersCloseBtn.addEventListener('click', function() {
                 filters.classList.remove('active');
                 filtersToggleBtn.classList.remove('active');
-                document.body.style.overflow = ''; // Разблокируем скролл
+                document.body.style.overflow = ''; 
             });
         }
         
-        // Закрытие при клике вне области фильтров
         filters.addEventListener('click', function(e) {
             if (e.target === filters) {
                 filters.classList.remove('active');
@@ -177,9 +176,8 @@ function initializeMobileFilters() {
     }
 }
 
-// ================= ФИЛЬТРЫ И СОРТИРОВКА =================
+// ФИЛЬТРЫ И СОРТИРОВКА 
 function initializeFilters() {
-    // Filter toggle
     document.querySelectorAll('.filter-header').forEach(header => {
         header.addEventListener('click', () => {
             const filterBox = header.closest('.filter-box');
@@ -189,7 +187,6 @@ function initializeFilters() {
         });
     });
 
-    // Initialize collapsed state
     document.querySelectorAll('.filter-box').forEach((box, index) => {
         if (index !== 0) {
             box.classList.add('collapsed');
@@ -198,20 +195,17 @@ function initializeFilters() {
         }
     });
 
-    // Category pills
     document.querySelectorAll(".cat-pill").forEach(btn => {
         btn.addEventListener("click", () => {
             document.querySelectorAll(".cat-pill").forEach(b => b.classList.remove("active"));
             btn.classList.add("active");
-            
-            // Фильтрация по категориям
+
             const categoryName = btn.textContent.trim();
             console.log('Category selected:', categoryName);
             filterProductsByCategory(categoryName);
         });
     });
 
-    // Filter tags
     document.querySelectorAll(".tag").forEach(tag => {
         tag.addEventListener("click", () => {
             tag.classList.toggle("active");
@@ -219,7 +213,6 @@ function initializeFilters() {
         });
     });
 
-    // Size buttons
     document.querySelectorAll(".size-btn").forEach(btn => {
         btn.addEventListener("click", () => {
             btn.classList.toggle("active");
@@ -227,7 +220,6 @@ function initializeFilters() {
         });
     });
 
-    // Color selection
     document.querySelectorAll(".color-dot").forEach(dot => {
         dot.addEventListener("click", () => {
             document.querySelectorAll(".color-dot").forEach(d => d.classList.remove("active"));
@@ -236,7 +228,6 @@ function initializeFilters() {
         });
     });
 
-    // Sorting
     if (sortSelect) {
         sortSelect.addEventListener("click", (e) => {
             e.stopPropagation();
@@ -254,7 +245,6 @@ function initializeFilters() {
                 
                 sortDrop.classList.add("hidden");
 
-                // Sorting logic
                 const sortType = option.textContent;
                 let productsToSort = currentCategory 
                     ? products.filter(p => p.category_name === currentCategory)
@@ -269,7 +259,6 @@ function initializeFilters() {
                         break;
                     case "Newest":
                     default:
-                        // Keep original order
                         break;
                 }
                 
@@ -284,7 +273,7 @@ function initializeFilters() {
     });
 }
 
-// ================= ФИЛЬТРАЦИЯ ПО ЦЕНЕ =================
+// ФИЛЬТРАЦИЯ ПО ЦЕНЕ 
 function initializePriceFilter() {
     document.querySelectorAll('.price-input').forEach(input => {
         input.addEventListener('input', function() {
@@ -320,7 +309,6 @@ function initializePriceFilter() {
         });
     });
 
-    // Set initial values
     const minPriceInput = document.querySelector('.price-input:first-of-type');
     const maxPriceInput = document.querySelector('.price-input:last-of-type');
     if (minPriceInput && maxPriceInput) {
@@ -346,6 +334,5 @@ function updatePriceFilter() {
         maxPriceInput.style.borderColor = '';
         
         console.log('Filtering by price:', minPrice, '-', maxPrice);
-        // Реальная фильтрация будет добавлена позже
     }
 }

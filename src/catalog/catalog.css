@@ -1,11 +1,11 @@
-/* ===== GLOBAL ===== */
+
 body {
     font-family: "Inter", sans-serif;
     background: #fafafa;
     margin: 0;
 }
 
-/* ===== PAGE ===== */
+
 .catalog-page {
     padding: 40px 80px;
 }
@@ -17,7 +17,7 @@ body {
     color: #1A1A1A;
 }
 
-/* ===== CATEGORY PILLS ===== */
+
 .categories {
     display: flex;
     gap: 10px;
@@ -40,7 +40,6 @@ body {
     color: #fff;
 }
 
-/* ===== LAYOUT GRID ===== */
 .catalog-layout {
     display: grid;
     grid-template-columns: 280px 1fr;
@@ -48,14 +47,13 @@ body {
     align-items: start;
 }
 
-/* ===== FILTERS COLUMN ===== */
 .filters {
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
 
-/* ===== FILTER BOX ===== */
+
 .filter-box {
     background: #FFFFFF;
     border-radius: 22px;
@@ -87,7 +85,6 @@ body {
     gap: 10px;
 }
 
-/* ===== SIZE BUTTONS ===== */
 .size-btn {
     background: #F3F3F6;
     padding: 8px 14px;
@@ -104,8 +101,6 @@ body {
     background: #7057DF;
     color: #fff;
 }
-
-/* ===== COLOR DOTS ===== */
 .color-row {
     display: flex;
     gap: 12px;
@@ -126,7 +121,6 @@ body {
     box-shadow: 0 0 0 2px #7057DF;
 }
 
-/* ===== TAGS ===== */
 .tag {
     padding: 6px 12px;
     background: #F3F3F6;
@@ -147,7 +141,6 @@ body {
     padding: 6px 16px;
 }
 
-/* ===== PRICE INPUTS ===== */
 .price-row {
     display: flex;
     align-items: center;
@@ -173,13 +166,11 @@ body {
     outline: none;
 }
 
-/* ===== RIGHT PANEL ===== */
 .right-panel {
     display: flex;
     flex-direction: column;
 }
 
-/* ===== SORT SELECT ===== */
 .sort-wrapper {
     display: flex;
     justify-content: flex-start;
@@ -245,7 +236,6 @@ body {
     font-weight: 600;
 }
 
-/* ===== FILTER TOGGLE FUNCTIONALITY ===== */
 .filter-box {
     background: #FFFFFF;
     border-radius: 22px;
@@ -287,7 +277,7 @@ body {
     display: none;
 }
 
-/* ===== COMPACT PRICE FILTER ===== */
+
 .price-row {
     display: flex;
     align-items: center;
@@ -323,7 +313,6 @@ body {
     margin: 0 4px;
 }
 
-/* ===== COLOR SELECTION ===== */
 .color-row {
     display: flex;
     gap: 12px;
@@ -357,30 +346,26 @@ body {
     text-shadow: 0 0 2px rgba(0,0,0,0.5);
 }
 
-/* White color dot needs special treatment */
 .color-dot[style*="background:#FFFFFF"]::after {
     color: #333;
     text-shadow: none;
 }
 
-/* ===== SIZE BUTTONS ACTIVE STATE ===== */
 .size-btn.active {
     background: #7057DF;
     color: #fff;
 }
 
-/* ===== INITIAL COLLAPSED STATE ===== */
 .filter-box.collapsed .filter-content {
     display: none;
 }
 
-/* ===== PRODUCTS GRID ===== */
 .products-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 32px;
 }
-/* ===== COMPACT PRICE FILTER ===== */
+
 .price-row {
     display: flex;
     align-items: center;
@@ -417,7 +402,7 @@ body {
     margin: 0 4px;
 }
 
-/* Стили для инпутов */
+
 .price-input::placeholder {
     color: #999;
 }
@@ -425,7 +410,7 @@ body {
 .price-input:invalid {
     border-color: #ff4444;
 }
-/* PRODUCT CARD */
+
 .product-card {
     background: #FFFFFF;
     padding: 14px;
@@ -461,7 +446,6 @@ body {
 
 
 
-/* ===== RESPONSIVE ===== */
 @media (max-width: 1200px) {
     .catalog-page {
         padding: 40px 20px;
@@ -472,7 +456,6 @@ body {
     }
 }
 
-/* Mobile: кнопка "All filters" - скрыта на desktop */
 .filters-toggle-btn {
     display: none;
 }
@@ -500,8 +483,7 @@ body {
         font-size: 24px;
         margin-bottom: 20px;
     }
-    
-    /* Category pills - горизонтальный скролл */
+
     .categories {
         overflow-x: auto;
         padding-bottom: 10px;
@@ -523,14 +505,12 @@ body {
         font-size: 13px;
         padding: 6px 16px;
     }
-    
-    /* Layout */
+
     .catalog-layout {
         grid-template-columns: 1fr;
         gap: 20px;
     }
-    
-    /* Кнопка "All filters" */
+
     .filters-toggle-btn {
         display: block;
         width: 100%;
@@ -555,8 +535,7 @@ body {
         border-color: #7057DF;
         background: rgba(112, 87, 223, 0.05);
     }
-    
-    /* Фильтры скрыты по умолчанию */
+
     .filters {
         display: none;
         position: fixed;
@@ -574,8 +553,7 @@ body {
     .filters.active {
         display: flex;
     }
-    
-    /* Закрыть фильтры кнопка */
+
     .filters-close-btn {
         display: block;
         width: 100%;
@@ -595,8 +573,7 @@ body {
     .filters-close-btn:hover {
         background: #5a46c0;
     }
-    
-    /* Products grid - 2 колонки */
+
     .products-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 16px;
@@ -619,8 +596,7 @@ body {
     .product-price {
         font-size: 15px;
     }
-    
-    /* Sort dropdown */
+
     .sort-wrapper {
         margin-bottom: 20px;
     }

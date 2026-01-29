@@ -10,14 +10,12 @@ body {
     padding: 40px 60px 100px;
 }
 
-/* MAIN GRID */
 .product-main {
     display: grid;
     grid-template-columns: 90px 620px 380px;
     gap: 32px;
 }
 
-/* THUMBS */
 .thumbs {
     display: flex;
     flex-direction: column;
@@ -38,7 +36,6 @@ body {
     border-color: #6a5af9;
 }
 
-/* MAIN IMAGE */
 .main-image {
     background: #f3f3f3;
     border-radius: 32px;
@@ -55,7 +52,7 @@ body {
     object-fit: contain;
 }
 
-/* PRODUCT INFO */
+
 .product-info h1 {
     font-size: 28px;
     font-weight: 700;
@@ -68,7 +65,6 @@ body {
     margin-bottom: 20px;
 }
 
-/* OPTION BLOCK */
 .option-box {
     background: #fff;
     border-radius: 24px;
@@ -77,7 +73,6 @@ body {
     margin-bottom: 18px;
 }
 
-/* HEADER */
 .option-header {
     display: flex;
     justify-content: space-between;
@@ -92,7 +87,6 @@ body {
     text-decoration: underline;
 }
 
-/* FIT TYPE */
 .fit-types {
     display: flex;
     gap: 10px;
@@ -112,7 +106,6 @@ body {
     color: white;
 }
 
-/* SIZE BUTTONS */
 .sizes {
     display: flex;
     flex-wrap: wrap;
@@ -133,7 +126,6 @@ body {
     color: white;
 }
 
-/* COLORS */
 .colors {
     display: flex;
     gap: 12px;
@@ -152,7 +144,6 @@ body {
     box-shadow: 0 0 0 2px #6a5af9;
 }
 
-/* COLORS */
 .black{background:#000}
 .red{background:#c62828}
 .brown{background:#5d4037}
@@ -163,7 +154,6 @@ body {
 .dark{background:#333}
 .blue{background:#4fc3f7}
 
-/* BUTTON */
 .add-to-cart {
     margin-top: 12px;
     background: #6a5af9;
@@ -176,7 +166,6 @@ body {
     cursor: pointer;
 }
 
-/* RECOMMENDED SECTION */
 .recommended {
     margin-top: 60px;
 }
@@ -225,20 +214,17 @@ body {
     font-weight: 700;
 }
 
-/* ===== МОБИЛЬНАЯ АДАПТАЦИЯ ===== */
 @media (max-width: 768px) {
     .product-page {
-        padding: 20px 16px 100px; /* Отступ снизу для фиксированной кнопки */
+        padding: 20px 16px 100px;
     }
-    
-    /* Вертикальный layout */
+
     .product-main {
         display: flex;
         flex-direction: column;
         gap: 20px;
     }
-    
-    /* Thumbs - горизонтальный скролл снизу */
+ 
     .thumbs {
         order: 3;
         display: flex;
@@ -255,8 +241,7 @@ body {
         height: 60px;
         flex-shrink: 0;
     }
-    
-    /* Main image - свайп */
+
     .main-image {
         order: 1;
         height: 400px;
@@ -271,8 +256,7 @@ body {
         height: 100%;
         object-fit: contain;
     }
-    
-    /* Product info */
+
     .product-info {
         order: 2;
     }
@@ -286,8 +270,7 @@ body {
         font-size: 20px;
         margin-bottom: 16px;
     }
-    
-    /* Option boxes */
+
     .option-box {
         padding: 16px;
         border-radius: 18px;
@@ -301,8 +284,7 @@ body {
     .size-guide {
         font-size: 12px;
     }
-    
-    /* Size buttons - горизонтальный скролл */
+
     .sizes {
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
@@ -315,8 +297,7 @@ body {
         padding: 10px 16px;
         font-size: 14px;
     }
-    
-    /* Colors - горизонтальный скролл */
+
     .colors {
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
@@ -327,7 +308,6 @@ body {
         flex-shrink: 0;
     }
     
-    /* Фиксированная кнопка Add to Cart */
     .add-to-cart {
         position: fixed;
         bottom: 0;
@@ -341,8 +321,7 @@ body {
         z-index: 999;
         box-shadow: 0 -4px 12px rgba(0,0,0,0.1);
     }
-    
-    /* Recommended section */
+
     .recommended {
         margin-top: 40px;
     }

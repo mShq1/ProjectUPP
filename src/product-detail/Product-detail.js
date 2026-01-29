@@ -2,7 +2,7 @@ const params = new URLSearchParams(window.location.search);
 const productId = params.get('id');
 let currentProduct = null;
 
-// ================= ЗАГРУЗКА ТОВАРА =================
+
 async function loadProduct() {
     const res = await fetch(`http://localhost:8000/api/products/${productId}/`);
     const product = await res.json();
@@ -38,7 +38,7 @@ async function loadProduct() {
     }
 }
 
-// ================= РЕКОМЕНДАЦИИ =================
+
 async function loadRecommended() {
     const res = await fetch('http://localhost:8000/api/products/');
     const products = await res.json();
@@ -67,7 +67,7 @@ async function loadRecommended() {
         });
 }
 
-// ================= АКТИВАЦИЯ КНОПОК =================
+
 document.querySelectorAll('.size-btn').forEach(btn => {
     btn.onclick = () => {
         document.querySelectorAll('.size-btn').forEach(b => b.classList.remove('active'));
@@ -90,7 +90,7 @@ document.querySelectorAll('.color-dot').forEach(dot => {
 });
 
 
-// ================= ДОБАВЛЕНИЕ В КОРЗИНУ =================
+
 document.querySelector('.add-to-cart').onclick = () => {
     if (!currentProduct) return;
 
@@ -111,7 +111,7 @@ document.querySelector('.add-to-cart').onclick = () => {
     cart.push(item);
     localStorage.setItem("cart", JSON.stringify(cart));
 
-    alert("Товар добавлен в корзину ✅");
+    alert("Товар добавлен в корзину");
 };
 
 

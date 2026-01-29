@@ -1,17 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    // ===== Берём корзину из localStorage =====
+
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 
-    // ===============================  
-    // 1. РЕНДЕР ТОВАРОВ ПОД "YOUR CART"
-    // ===============================  
     function renderCheckoutCart() {
         const container = document.querySelector('.your-cart');
         if (!container) return;
 
-        // удаляем тестовые карточки, оставляем только заголовок
         container.querySelectorAll('.cart-card').forEach(el => el.remove());
 
         if (cart.length === 0) {
@@ -41,10 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-
-    // ===============================  
-    // 2. РАСЧЁТ SUMMARY (Subtotal, Discount, Total)
-    // ===============================  
+ 
     function updateOrderSummary() {
         let subtotal = cart.reduce((sum, item) => sum + item.price, 0);
 
@@ -76,9 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    // ===============================  
-    // 3. ПЕРЕКЛЮЧЕНИЕ ДОСТАВКИ (уже есть, просто добавим пересчёт)
-    // ===============================  
+
     document.querySelectorAll(".shipping-option").forEach(option => {
         option.addEventListener("click", () => {
             const group = option.closest(".shipping-methods");
@@ -92,10 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-
-    // ===============================  
-    // 4. ИНИЦИАЛИЗАЦИЯ
-    // ===============================  
-    renderCheckoutCart();    // товары
-    updateOrderSummary();    // суммы
+ 
+    renderCheckoutCart();    
+    updateOrderSummary();    
 });

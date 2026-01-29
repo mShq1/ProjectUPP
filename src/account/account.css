@@ -1,4 +1,4 @@
-/* account.css */
+
 .account-page {
     padding: 40px 80px;
 }
@@ -22,7 +22,6 @@
     gap: 32px;
 }
 
-/* ===== ACCOUNT SECTIONS ===== */
 .account-sections {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -112,13 +111,11 @@
     margin: 8px 0;
 }
 
-/* ===== Заголовки с Poppins ===== */
 .section-header h2 {
     font-family: "Poppins", sans-serif;
     font-weight: 700;
 }
 
-/* ===== МОБИЛЬНАЯ АДАПТАЦИЯ ===== */
 @media (max-width: 768px) {
     .account-page {
         padding: 20px 16px;
@@ -135,7 +132,6 @@
         margin-top: 8px;
     }
     
-    /* Карточный layout - одна колонка */
     .account-sections {
         grid-template-columns: 1fr;
         grid-template-rows: auto;

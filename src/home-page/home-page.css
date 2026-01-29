@@ -1,4 +1,4 @@
-/* Убираем горизонтальный скролл на всей странице, но разрешаем для каруселей */
+
 html, body {
     width: 100%;
     margin: 0;
@@ -9,7 +9,7 @@ body {
     overflow-x: hidden;
 }
 
-/* Разрешаем горизонтальный скролл для каруселей */
+
 .category-section,
 .collections-section {
     overflow-x: auto;
@@ -96,7 +96,6 @@ video {
     z-index: 20;
 }
 
-/* Секция заголовков под видео */
 .titles-section {
     width: 100%;
     padding: 30px 120px 10px;
@@ -128,17 +127,15 @@ video {
     margin-left: 0;
 }
 
-/* Секция с изображениями коллекций - ИСПРАВЛЕНО */
 .collections-section {
     width: 100%;
     padding: 0 120px 40px;
     background: transparent;
 }
 
-/* УМЕНЬШИЛ с 650px до 450px и ОБНОВИЛ медиа-запросы */
 .collections-grid {
     display: grid;
-    grid-template-columns: repeat(3, 500px); /* Нормальный размер */
+    grid-template-columns: repeat(3, 500px);
     justify-content: center;
     gap: 10px;
     width: 100%;
@@ -148,7 +145,7 @@ video {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 500px; /* Соответствует grid-template-columns */
+    width: 500px; 
 }
 
 
@@ -180,20 +177,20 @@ video {
     margin: 0;
 }
 
-/* Адаптивность - ОБНОВИЛ пропорционально */
+
 @media (max-width: 1400px) {
     .collections-grid {
-        grid-template-columns: repeat(3, 400px); /* Увеличил с 350px */
+        grid-template-columns: repeat(3, 400px); 
         gap: 8px;
     }
     
     .collection-item,
     .collection-text-content {
-        width: 400px; /* Увеличил с 350px */
+        width: 400px; 
     }
     
     .collection-image {
-        height: 500px; /* 400/450*562 = 500px */
+        height: 500px; 
     }
 }
 
@@ -205,17 +202,17 @@ video {
     }
     
     .collections-grid {
-        grid-template-columns: repeat(3, 350px); /* Увеличил с 300px */
+        grid-template-columns: repeat(3, 350px);
         gap: 6px;
     }
     
     .collection-item,
     .collection-text-content {
-        width: 350px; /* Увеличил с 300px */
+        width: 350px; 
     }
     
     .collection-image {
-        height: 438px; /* 350/450*562 = 438px */
+        height: 438px;
     }
     
     .collection-title {
@@ -227,28 +224,27 @@ video {
 @media (max-width: 1024px) {
     .titles-section,
     .collections-section {
-        padding-left: 60px; /* Увеличил с 40px */
+        padding-left: 60px;
         padding-right: 60px;
     }
     
     .collections-grid {
-        grid-template-columns: repeat(2, 380px); /* Увеличил с 320px */
+        grid-template-columns: repeat(2, 380px); 
         gap: 15px;
     }
     
     .collection-item,
     .collection-text-content {
-        width: 380px; /* Увеличил с 320px */
+        width: 380px;
     }
     
     .collection-image {
-        height: 475px; /* 380/450*562 = 475px */
+        height: 475px; 
     }
-    
-    /* Третье изображение центрируем */
+
     .collections-grid > .collection-item:nth-child(3) {
         grid-column: span 2;
-        width: 380px; /* Увеличил с 320px */
+        width: 380px;
         justify-self: center;
     }
 }
@@ -270,7 +266,7 @@ video {
     }
     
     .collection-image {
-        height: 425px; /* 340/450*562 = 425px */
+        height: 425px; 
     }
     
     .collections-grid > .collection-item:nth-child(3) {
@@ -279,7 +275,7 @@ video {
 }
 
 @media (max-width: 768px) {
-    /* Hero section - вертикальный layout */
+
     .video-container {
         height: 60vh;
         min-height: 400px;
@@ -312,7 +308,6 @@ video {
         line-height: 130% !important;
     }
     
-    /* Titles section */
     .titles-section,
     .collections-section {
         padding-left: 20px;
@@ -329,8 +324,7 @@ video {
         height: 30px;
         width: 100%;
     }
-    
-    /* Category section - горизонтальный скролл */
+
     .category-section {
         padding: 0 0 40px 0 !important;
         overflow-x: auto;
@@ -396,8 +390,7 @@ video {
         padding: 14px;
         font-size: 15px;
     }
-    
-    /* Collections - горизонтальный скролл */
+
     .collections-section {
         padding: 0 0 40px 0 !important;
         overflow-x: auto;
@@ -449,7 +442,6 @@ video {
 }
 
 @media (max-width: 480px) {
-    /* Hero section */
     .video-container {
         height: 50vh;
         min-height: 350px;
@@ -474,8 +466,7 @@ video {
         font-size: 16px;
         line-height: 130%;
     }
-    
-    /* Titles */
+
     .titles-section {
         padding: 15px 16px 5px;
     }
@@ -483,8 +474,7 @@ video {
     .title-item h3 {
         font-size: 22px;
     }
-    
-    /* Category section */
+
     .category-section {
         padding: 0 0 30px 0;
     }
@@ -518,7 +508,6 @@ video {
         font-size: 13px;
     }
     
-    /* Collections */
     .collections-section {
         padding: 0 0 30px 0;
     }
